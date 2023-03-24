@@ -15,6 +15,9 @@ cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
 
 ## WMIC
+wmic /node:FJCM172D2E bios get serialnumber
+wmic path win32_VideoController get name, driverversion
+wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
 
 ## UL Microsoft Netzwerk
 
