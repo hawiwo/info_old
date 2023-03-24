@@ -1,4 +1,30 @@
 # info
+## Offene Fragen
+### Starface
+warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt:
+```
+Zur Zeit aktive Rufkanäle:	2
+```
+Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
+
+# Tips
+shutdown /r /fw /f /t 0       startet den computer neu und geht ins BIOS
+ipconfig /all | findstr DNS
+ipconfig /displaydns | clip
+getmac /v
+powercfg /energy
+assoc
+assoc .MP4=VLC.vlc
+sfc /scannow
+DISM /Online /Cleanup-Image [/CheckHealth | /ScanHealth | /RestoreHealth]
+tasklist | findstr script
+taskkill /f /pid 1234
+netsh wlan show wlanreport
+netsh advfirewall set allprofiles state off
+netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip port 3423
+netstat -o
+netstat -e -t 5
+
 ## c't
 ### Projektseiten
 [Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
@@ -196,19 +222,27 @@ A.b.baeuerle@freenet.de
 |      |                   |
 
 # Telekom
+## Kontakt
+Telekom Kundennummer 1920006802 IBAN DE10 6049 1430 0078 1960 00
+Telekom Geschäftskunden
+nur Festnetz 0800 3302870
+nur Mobile 0800 3302828
 
-Telekom Kundennummer 1920006802
-
-SIP Trunc Hauptnetz 07147-220330 VDSL100
+## Leitungen
+### 07147-220330
+SIP Trunc Hauptnetz  VDSL100
+4 Eingehende Zeitgleich
+4 Ausgehende Zeitgleich
 Zyxel VMG1312-B30A
 LEDs Normal: 
 
-Gastzugang auf der Nummer 071476758 VDSL100
+### 07147675
+Gastzugang auf der Nummer 8 VDSL100
 Fritzbox 7430
 
 Kundencenter [gerd.ulmer@t-online.de](mailto:gerd.ulmer@t-online.de) gu270651
 
-Telekom Geschäftskunden
+
 nur Festnetz 0800 3302870
 nur Mobile 0800 3302828
 
