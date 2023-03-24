@@ -1,5 +1,8 @@
 # info
-## c't WIMage
+## c't
+### Projektseiten
+[Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
+### WIMage
 [Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
 
 [Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
@@ -10,7 +13,10 @@
 cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && cmdkey /delete:TERMSRV/{URL:RMVSCM}"
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
-## Microsoft Netzwerki
+
+## WMIC
+
+## UL Microsoft Netzwerk
 
 Der Ordner 90_Download ist auf ein RDX-Laufwerk ausgelagert um die tägliche Datenwicherung (?) zu vermeiden. Falls der Link nicht mehr funktioniert muss das Verzeichnis \\\public\90_Download (deadlink) gelöscht werden und mit mit:
 
@@ -216,7 +222,8 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 
 13:30	Telefonische reklamation - Telekomelement zeigt Fehler an und ist  aktuell in Bearbeitung durch MA vorort.
 
-
+# Links
+[Github Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 # Gesprächsprotokoll
 
@@ -225,3 +232,6 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 15.11.21 12:40	Alle Azubi-Accounts löschen und ein Azubi Account anlegen.
 
 ​	Azubis sind: Stefan Mijic, Ensar, Moritz Weingart, Carolin
+
+überzeiten abrechen
+24.03.2023 04:25 
