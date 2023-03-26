@@ -1,13 +1,14 @@
 # info
 ## Offene Fragen
 ### Starface
-warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt:
+#### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
 ```
 Zur Zeit aktive Rufkanäle:	2
 ```
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 
 # Tips
+```
 shutdown /r /fw /f /t 0       startet den computer neu und geht ins BIOS
 ipconfig /all | findstr DNS
 ipconfig /displaydns | clip
@@ -24,7 +25,7 @@ netsh advfirewall set allprofiles state off
 netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip port 3423
 netstat -o
 netstat -e -t 5
-
+```
 ## c't
 ### Projektseiten
 [Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
@@ -41,9 +42,14 @@ cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
 
 ## WMIC
+```
 wmic /node:FJCM172D2E bios get serialnumber
 wmic path win32_VideoController get name, driverversion
 wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
+```
+[Alles-Verwalter - Windows clever managen mit WMI](https://www.heise.de/select/ct/2019/2/1546680468035288)
+
+[PowerShell and WMI: Covers 150 Practical Techniques](https://www.amazon.de/PowerShell-WMI-Richard-Siddaway/dp/1617290114/ref=sr_1_14?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UM12TY4GOG31&keywords=wmi&qid=1679813751&s=books&sprefix=wmi%2Cstripbooks%2C102&sr=1-14)
 
 ## UL Microsoft Netzwerk
 
