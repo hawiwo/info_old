@@ -160,7 +160,7 @@ https://my.hidrive.com/share/24zbyzcp6q
 |             hwolf | 5m67+0as0 (Tresor: 527517)                     |             | ARLT-4VV24
 |            mulmer | 9@xA1-Su                                       |             | TP20NN65DE ?
 |           tbuesch | _7EGI=i2 (Tbüsch 1704  TB2016)                 | 13.9.       | FJCM172D2E TPP15SA797
-|             kkaps | H_7#W1Gj (PC:kk010799) (O:11769naC) (8kk010799)|             | FJME15BD763
+|             kkaps | H_7#W1Gj (PC:kk010799) (O:KK2009ul) (8kk010799)|             | FJME15BD763
 |            abentz | YQ50N5X!  (PC:ab3sgbm Yof44394)                |             | TSM30BE0908
 |          bpeichel | 7Fz{GS!0 (O:Fub02843)                          |             | FJE7824F50
 |           jkrause | udZAF8K9  JK2017ul (JK2017ul )                 |             |
@@ -169,7 +169,7 @@ https://my.hidrive.com/share/24zbyzcp6q
 |         zalbrecht | Vj{C4F1%                                       | 13.9.       | FJCM17B1B9
 |            rgudra | 96156doZ (O:[wie VPN]) (PC:Udral)              |             | FJH7701C96
 |            pappel | *h6K8E]v                                       |             |
-|         mroessler | 67wFN@[A (PC:MR2009ul) (O:Yoz49211)            | 6.9.        | FJCM170DE5 TPP15S5ED6
+|         mroessler | 67wFN@\[A (PC:MR2009ul) (O:Yoz49211)            | 6.9.        | FJCM170DE5 TPP15S5ED6
 |       amazioschek | M9!,3AGr (O:Nax03255)                          |             | FJE5512AA67 FJE7569045
 |         Pweiberle | (PC:MSzMTs11) (Off:VPN:Foj56713)               |             | TPP530B59
 |            Nicole | Yof12040 (PC:nima3105UL)                       |             | FJP9009CCC
@@ -260,13 +260,6 @@ PIN2: 6790 PUK2 43102939
 0170 7164356
 Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 
-```
-[Dec 14 10:24:03] WARNING[17364] chan_sip.c: Forbidden - wrong password on authentication for REGISTER for '+497147220330' to '+497147220330'
-```
-
-## Internetanbindung
-
-13:30	Telefonische reklamation - Telekomelement zeigt Fehler an und ist  aktuell in Bearbeitung durch MA vorort.
 
 # Links
 [Github Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
@@ -280,4 +273,4 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 ​	Azubis sind: Stefan Mijic, Ensar, Moritz Weingart, Carolin
 
 überzeiten abrechen
-24.03.2023 04:25 
+
