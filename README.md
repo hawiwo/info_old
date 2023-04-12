@@ -1,45 +1,21 @@
 # info
 :+1:
 
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
+- [ ] Shutdown Button im FPZ
+- [ ] De Nobile - wegen PV - Finkenweg
+- [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
+- [ ] https://github.com/hawiwo/FP2
+- [ ] HP-Z440 neu aufsetzten
+- [ ] Raspberry PI in Drehspinner einbauen
+- [ ] Projekte Laufwerk im Zeitraum 10.03.23-12.03.23 um 11GB gewachsen - Das könnte noch 12 Monate so gehen dann wäre Ende
+- [ ] AIM Anstehende Projekt
+- [ ] Matthias alter Laptop als neuen CAD Laptop richten
+
+## Wanted
+- [ ] 3 Hanf Pflanzen (Haschisch)
 
 ## Aktuell
-### Starface
-#### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
-```
-Zur Zeit aktive Rufkanäle:	2
-```
-Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
-
-
-## C
-### c't
-#### Projektseiten
-[Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
-#### WIMage
-[Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
-
-[Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
-
-
-## E
-Windows Explorer neu starten
-```
-tasklist /f /im explorer.exe
-start explorer.exe
-exit
-```
-## S
-Computer neu starten und direkt ins BIOS
-```
-shutdown /r /fw /f /t 0
-```
-## I
-ipconfig /all | findstr DNS
-ipconfig /displaydns | clip
-
+### Ausprobieren
 ```
 getmac /v
 powercfg /energy
@@ -55,6 +31,43 @@ netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip
 netstat -o
 netstat -e -t 5
 ```
+
+### Starface
+#### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
+```
+Zur Zeit aktive Rufkanäle:	2
+```
+Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
+
+## A
+## B
+## C
+### c't
+#### Projektseiten
+[Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
+#### WIMage
+[Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
+
+[Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
+
+## D
+
+## E
+Windows Explorer neu starten
+```
+tasklist /f /im explorer.exe
+start explorer.exe
+exit
+```
+## F
+## G
+## H
+## I
+```
+ipconfig /all | findstr DNS
+ipconfig /displaydns | clip
+```
+## J
 ## K
 ### Keepass 2
 #### URL-Overrides
@@ -62,20 +75,45 @@ netstat -e -t 5
 cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && cmdkey /delete:TERMSRV/{URL:RMVSCM}"
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
+## L
 ## M
 ### Markdown
 [git markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-## W
-### WMIC
+### Malu 08:00-09:00 und 13:00-14:00
+## N
+## O
+## P
+### Projekte Bezeichnungen und Kürzel
+#### 301 Verpassanlage
+Klaus K.
 ```
-wmic /node:FJCM172D2E bios get serialnumber
-wmic path win32_VideoController get name, driverversion
-wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
+Patrick Dietzel
+MaschinenRüster / Machines elm
+Lenkungstechnik Willi Elbe GmbH & Co. KG
+Sandfeld 20
+D - 98639 Rippershausen
+Tel.:+49 (3693) - 8993 272
+Fax:+49 (3693) - 8993 20
 ```
-[Alles-Verwalter - Windows clever managen mit WMI](https://www.heise.de/select/ct/2019/2/1546680468035288)
-
-[PowerShell and WMI: Covers 150 Practical Techniques](https://www.amazon.de/PowerShell-WMI-Richard-Siddaway/dp/1617290114/ref=sr_1_14?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UM12TY4GOG31&keywords=wmi&qid=1679813751&s=books&sprefix=wmi%2Cstripbooks%2C102&sr=1-14)
-
+#### 306
+```
+Intern A.Mazioschek
+Andreas Rieger
+Prozessentwicklung / Process Development
+Willi Elbe Antriebstechnik GmbH & Co. KG
+Max-Eyth-Str. 3
+D - 74629 Pfedelbach
+Tel.:+49 (7941) - 9136 123
+Fax:+49 (7941) - 9136 52
+```
+## Q
+## R
+## S
+Computer neu starten und direkt ins BIOS
+```
+shutdown /r /fw /f /t 0
+```
+## T
 ## U
 ### UL Microsoft Netzwerk
 
@@ -104,8 +142,6 @@ Küche 1.OG (7C:2F:80:E4:72:8D 192.168.2.169) ist  mit Busy 48. LAN-UV-02 (58:9E
 Halle 2 mit Busy 184 (LAN-UV-2 Cl.1 udn SyncL.2)
 
 an Basisstationen überlastet. Deshalb habe ich ungenutzte versetzt.
-
-
 
 ### WLAN
 
@@ -303,3 +339,14 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 
 überzeiten abrechen
 
+## V
+## W
+### WMIC
+```
+wmic /node:FJCM172D2E bios get serialnumber
+wmic path win32_VideoController get name, driverversion
+wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
+```
+[Alles-Verwalter - Windows clever managen mit WMI](https://www.heise.de/select/ct/2019/2/1546680468035288)
+
+[PowerShell and WMI: Covers 150 Practical Techniques](https://www.amazon.de/PowerShell-WMI-Richard-Siddaway/dp/1617290114/ref=sr_1_14?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UM12TY4GOG31&keywords=wmi&qid=1679813751&s=books&sprefix=wmi%2Cstripbooks%2C102&sr=1-14)
