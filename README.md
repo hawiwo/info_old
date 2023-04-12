@@ -8,6 +8,7 @@ Zur Zeit aktive Rufkanäle:	2
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 
 # Tips
+### E
 Windows Explorer neu starten
 ```
 tasklist /f /im explorer.exe
