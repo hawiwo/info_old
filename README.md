@@ -13,34 +13,15 @@ Zur Zeit aktive Rufkanäle:	2
 ```
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 
-<details>
-<summary>B</summary>
-<details>
-<summary>Bienen</summary>
 
-# b
-</details>
-</details>
-
-<details>
-<summary>C</summary>
-
-## c't
-### Projektseiten
+## C
+### c't
+#### Projektseiten
 [Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
-### WIMage
+#### WIMage
 [Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
 
 [Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
-</details>
-
-<details>
-<summary>D</summary>
-</details>
-
-<details>
-<summary></summar>
-</details>
 
 
 ## E
@@ -139,7 +120,9 @@ office: ulmerautomation-de01c.mail.protection.outlook.com
 
 Tastatur nicht angeschlossen.Bitte F1 drücken! (Tna.BF1d!)
 
-##### Firewall Schnittstellen
+<details>
+<summary>Firewall Schnittstellen</summary>
+
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -194,6 +177,7 @@ eth1
 wwan0
   Typ: mobile
 ```
+</details>
 ### Firewallzugänge
 
 https://my.hidrive.com/share/24zbyzcp6q
