@@ -1,6 +1,8 @@
 # info
 :+1:
 
+- [ ] IPC für S:\318. iwis Laserschweissanlage MIDI richten
+- [ ] Matthias alter Laptop als neuen CAD Laptop richten
 - [ ] Shutdown Button im FPZ
 - [ ] De Nobile - wegen PV - Finkenweg
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
@@ -9,13 +11,39 @@
 - [ ] Raspberry PI in Drehspinner einbauen
 - [ ] Projekte Laufwerk im Zeitraum 10.03.23-12.03.23 um 11GB gewachsen - Das könnte noch 12 Monate so gehen dann wäre Ende
 - [ ] AIM Anstehende Projekt
-- [ ] Matthias alter Laptop als neuen CAD Laptop richten
+- [ ] S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
 
 ## Wanted
 - [ ] 3 Hanf Pflanzen (Haschisch)
 
 ## Aktuell
 ### Ausprobieren
+<details>
+<summary>mermaid Diagramme</summary>
+    
+[mermaid Diagramme](https://mermaid.js.org/intro/)
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+
+```
+</details>
+
 ```
 getmac /v
 powercfg /energy
@@ -31,14 +59,6 @@ netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip
 netstat -o
 netstat -e -t 5
 ```
-
-### Starface
-#### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
-```
-Zur Zeit aktive Rufkanäle:	2
-```
-Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
-
 ## A
 ## B
 ## C
@@ -84,7 +104,9 @@ cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ## O
 ## P
 ### Projekte Bezeichnungen und Kürzel
-#### 301 Verpassanlage
+#### 273 AIM_Automatisierung MMA
+S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
+#### 301. WE_Verpassanlage
 Klaus K.
 ```
 Patrick Dietzel
@@ -95,7 +117,7 @@ D - 98639 Rippershausen
 Tel.:+49 (3693) - 8993 272
 Fax:+49 (3693) - 8993 20
 ```
-#### 306
+#### 306. WE_Montage_Lenkspindel
 ```
 Intern A.Mazioschek
 Andreas Rieger
@@ -113,6 +135,14 @@ Computer neu starten und direkt ins BIOS
 ```
 shutdown /r /fw /f /t 0
 ```
+### Starface
+#### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
+```
+Zur Zeit aktive Rufkanäle:	2
+```
+Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
+### Shortcuts
+[Tastenkombinationen](https://knowledge.starface.de/display/SWD/Tastenkombinationen+am+Telefon)
 ## T
 ## U
 ### UL Microsoft Netzwerk
@@ -218,53 +248,63 @@ wwan0
 
 https://my.hidrive.com/share/24zbyzcp6q
 
+First Header  | Second Header
+------------- | -------------
+  Content Cell  | Content Cell
+  Content Cell  | Content Cell
 
+Name |Passwort | LastChange |PC Name | Win10 Key
+-------------------|----------------------------------------------- |-------------|------------------------|------------------------
+hwolf | 5m67+0as0 (Tresor: 527517) | | ARLT-4VV24|
+mulmer | 9@xA1-Su | | TP20NN65DE ?|
+tbuesch | _7EGI=i2 (Tbüsch 1704 TB2016) | 13.9. | FJCM172D2E TPP15SA797|
+kkaps | H_7#W1Gj (PC:kk010799) (O:KK2009ul) (8kk010799)| | FJME15BD763
+abentz | YQ50N5X! (PC:ab3sgbm Yof44394) | | TSM30BE0908
+bpeichel | 7Fz{GS!0 (O:Fub02843) | | FJE7824F50
+jkrause | udZAF8K9 JK2017ul (JK2017ul )
+mstrecker | 9?yX1,Op
+fmack | 7^W1IZm)
+zalbrecht | Vj{C4F1% | 13.9. | FJCM17B1B9
+rgudra | 96156doZ (O:[wie VPN]) (PC:Udral) | | FJH7701C96v
+pappel | *h6K8E]v
+mroessler | 67wFN@\[A (PC:MR2009ul) (O:Yoz49211) | 6.9. | FJCM170DE5 TPP15S5ED6
+amazioschek | M9!,3AGr (O:Nax03255) | | FJE5512AA67 FJE7569045
+Pweiberle | (PC:MSzMTs11) (Off:VPN:Foj56713) | | TPP530B59
+Nicole | Yof12040 (PC:nima3105UL) | | FJP9009CCC
+Udo | Lot54264 (PC:1701) | | FJM770N03CC
+Marianne | 2460maR! | | FJP400BD81
+Patrick | Jon39161 (Eyk)
+Gerd | 11401juH | | FJE7549C75 TP20NN656E
+M.Strecker | 15772toN
+Ziad | 20098toQ (30111971za) (VPN:eg5WQ6$7q) | | FJCM17B1B9
+Einkauf | 82851nuZ
+MRuber | Quw99993 Moni! | 6.9.-17.9. | FJP557BC82
+Sebastian Isbaner | 25037paY (Br011066) | 13.9.
+Helmut | he18 | 13.9.
+Lknippel | LiKni
+Nicole | nima3105UL
+KoMi | scanner@ulmer-automation.de Pon83323
+jmagin | Temporäres Kennwort: Ful61966 Josefmagin15!
+Alkemper, Marian | | 20.9.
+Hegele, Luca | | 13.9.
+Felix | fmNSikZs1E
+Ensar | | 13.9
+hannes stütz | Hay38630 (aiGaeg5R)
+ckumbeiz | Dog72780
+Stefan Mijic | Jag33398
+Tbangerdt | Rul38307 Aquaman5515 | | FJCM170D93
+hfix | Voz42044 | | HPZ440514650
+mhiller | Bod16975 | | TSP5207CB0
+mhiller | Dur28231 | | TPP15V4F86
+max ziehr | Haz32705
+Lars Burkhardt | Nos40825
+CAD-Laptop|MU Alter||FJH770EDBF|P2PQ6-GJNPY-4QWMR-QQFKY-R6YP2
+||||PANELDREHSPIN
+||||PANELHERMLEC22U
+||||PANELHERMLEC650
+||||PANELKONDIA
+||||PANELSPINNER
 
-|Name               |Passwort                                        | LastChange  |PC Name
-|-------------------|----------------------------------------------- |-------------|------------------------
-|             hwolf | 5m67+0as0 (Tresor: 527517)                     |             | ARLT-4VV24
-|            mulmer | 9@xA1-Su                                       |             | TP20NN65DE ?
-|           tbuesch | _7EGI=i2 (Tbüsch 1704  TB2016)                 | 13.9.       | FJCM172D2E TPP15SA797
-|             kkaps | H_7#W1Gj (PC:kk010799) (O:KK2009ul) (8kk010799)|             | FJME15BD763
-|            abentz | YQ50N5X!  (PC:ab3sgbm Yof44394)                |             | TSM30BE0908
-|          bpeichel | 7Fz{GS!0 (O:Fub02843)                          |             | FJE7824F50
-|           jkrause | udZAF8K9  JK2017ul (JK2017ul )                 |             |
-|         mstrecker | 9?yX1,Op                                       |             |
-|             fmack | 7^W1IZm)                                       |             |
-|         zalbrecht | Vj{C4F1%                                       | 13.9.       | FJCM17B1B9
-|            rgudra | 96156doZ (O:[wie VPN]) (PC:Udral)              |             | FJH7701C96
-|            pappel | *h6K8E]v                                       |             |
-|         mroessler | 67wFN@\[A (PC:MR2009ul) (O:Yoz49211)            | 6.9.        | FJCM170DE5 TPP15S5ED6
-|       amazioschek | M9!,3AGr (O:Nax03255)                          |             | FJE5512AA67 FJE7569045
-|         Pweiberle | (PC:MSzMTs11) (Off:VPN:Foj56713)               |             | TPP530B59
-|            Nicole | Yof12040 (PC:nima3105UL)                       |             | FJP9009CCC
-|               Udo | Lot54264 (PC:1701)                             |             | FJM770N03CC
-|          Marianne | 2460maR!                                       |             | FJP400BD81
-|           Patrick | Jon39161 (Eyk)                                 |             |
-|              Gerd | 11401juH                                       |             | FJE7549C75 TP20NN656E
-|        M.Strecker | 15772toN                                       |             |
-|              Ziad | 20098toQ (30111971za) (VPN:eg5WQ6$7q)          |             | FJCM17B1B9
-|           Einkauf | 82851nuZ                                       |             |
-|            MRuber | Quw99993 Moni!                                 | 6.9.-17.9.  | FJP557BC82
-| Sebastian Isbaner | 25037paY (Br011066)                            | 13.9.       |
-|            Helmut | he18                                           | 13.9.       |
-|          Lknippel | LiKni                                          |             |
-|            Nicole | nima3105UL                                     |             |
-|              KoMi | scanner@ulmer-automation.de Pon83323           |             |
-|            jmagin | Temporäres Kennwort: Ful61966 Josefmagin15!    | |           |
-|  Alkemper, Marian |                                                | 20.9.       |
-|      Hegele, Luca |                                                | 13.9.       |
-|             Felix | fmNSikZs1E                                     |             |
-|             Ensar |                                                | 13.9        |
-|      hannes stütz | Hay38630 (aiGaeg5R)                            |             |
-|          ckumbeiz |      Dog72780                                  |             |
-|      Stefan Mijic |        Jag33398                                |             |
-|         Tbangerdt | Rul38307   Aquaman5515                         |             | FJCM170D93
-| hfix              | Voz42044                                       |             | HPZ440514650
-| mhiller           | Bod16975                                       |             | TSP5207CB0
-| mhiller           | Dur28231                                       |             | TPP15V4F86
-| max ziehr         | Haz32705                                       |             |
-| Lars Burkhardt    | Nos40825                                       |             |
 
 A.b.baeuerle@freenet.de
 1320derherristmeinhirte
@@ -293,8 +333,13 @@ A.b.baeuerle@freenet.de
 |      |                   |
 
 # Telekom
+[allestörungen](https://allestörungen.de/)
+[netzausfall](https://www.netzausfall.net/)
+    
 ## Kontakt
-Telekom Kundennummer 1920006802 IBAN DE10 6049 1430 0078 1960 00
+
+Telekom Kundennummer 1920006802
+IBAN DE10 6049 1430 0078 1960 00
 Telekom Geschäftskunden
 nur Festnetz 0800 3302870
 nur Mobile 0800 3302828
