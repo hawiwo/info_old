@@ -1,5 +1,11 @@
 # info
-## Offene Fragen
+:+1:
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+## Aktuell
 ### Starface
 #### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
 ```
@@ -7,20 +13,53 @@ Zur Zeit aktive Rufkanäle:	2
 ```
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 
-# Tips
-### E
+<details>
+<summary>B</summary>
+<details>
+<summary>Bienen</summary>
+
+# b
+</details>
+</details>
+
+<details>
+<summary>C</summary>
+
+## c't
+### Projektseiten
+[Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
+### WIMage
+[Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
+
+[Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
+</details>
+
+<details>
+<summary>D</summary>
+</details>
+
+<details>
+<summary></summar>
+</details>
+
+
+## E
 Windows Explorer neu starten
 ```
 tasklist /f /im explorer.exe
 start explorer.exe
 exit
 ```
-
-
+## S
+Computer neu starten und direkt ins BIOS
 ```
-shutdown /r /fw /f /t 0       startet den computer neu und geht ins BIOS
+shutdown /r /fw /f /t 0
+```
+## I
 ipconfig /all | findstr DNS
 ipconfig /displaydns | clip
+
+```
 getmac /v
 powercfg /energy
 assoc
@@ -35,22 +74,18 @@ netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip
 netstat -o
 netstat -e -t 5
 ```
-## c't
-### Projektseiten
-[Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
-### WIMage
-[Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
-
-[Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
-
-## Keepass 2
-### URL-Overrides
+## K
+### Keepass 2
+#### URL-Overrides
 ```
 cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && cmdkey /delete:TERMSRV/{URL:RMVSCM}"
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
-
-## WMIC
+## M
+### Markdown
+[git markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+## W
+### WMIC
 ```
 wmic /node:FJCM172D2E bios get serialnumber
 wmic path win32_VideoController get name, driverversion
@@ -60,7 +95,8 @@ wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
 
 [PowerShell and WMI: Covers 150 Practical Techniques](https://www.amazon.de/PowerShell-WMI-Richard-Siddaway/dp/1617290114/ref=sr_1_14?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UM12TY4GOG31&keywords=wmi&qid=1679813751&s=books&sprefix=wmi%2Cstripbooks%2C102&sr=1-14)
 
-## UL Microsoft Netzwerk
+## U
+### UL Microsoft Netzwerk
 
 Der Ordner 90_Download ist auf ein RDX-Laufwerk ausgelagert um die tägliche Datenwicherung (?) zu vermeiden. Falls der Link nicht mehr funktioniert muss das Verzeichnis \\\public\90_Download (deadlink) gelöscht werden und mit mit:
 
