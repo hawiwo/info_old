@@ -18,6 +18,8 @@
 
 ## Aktuell
 ### Ausprobieren
+1. [RAD Studio 11.3 neue Features]()
+
 <details>
 <summary>mermaid Diagramme</summary>
     
@@ -88,8 +90,12 @@ tasklist /f /im explorer.exe
 start explorer.exe
 exit
 ```
-### Embarcadero Support Calls
-#### 13.04.2023
+### Embarcadero
+#### Alexandria 11.3
+
+#### Embarcadero Support Calls
+##### 13.04.2023
+Patch.R113.Patch1-20230404.zip installiert
 
 <details>
 <summary>Verfasst aber nicht erstellt, weil sich das Problem nach Neuinstallation erledigt hat.</summary>
