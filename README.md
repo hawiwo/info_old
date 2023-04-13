@@ -1,4 +1,4 @@
-# info
+﻿# info
 :+1:
 
 - [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
@@ -64,6 +64,8 @@ netstat -e -t 5
 ## A
 ## B
 ## C
+### C++
+#### C++ 17
 ### c't
 #### Projektseiten
 [Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
@@ -96,6 +98,13 @@ exit
 #### Embarcadero Support Calls
 ##### 13.04.2023
 Patch.R113.Patch1-20230404.zip installiert
+#### Testen
+VCL TControlList control
+
+QuickEdit designers for VCL, including additional items in the designer menu, a pane for
+editing common control properties faster, and several other additions to the IDE
+designer experience
+
 
 <details>
 <summary>Verfasst aber nicht erstellt, weil sich das Problem nach Neuinstallation erledigt hat.</summary>
