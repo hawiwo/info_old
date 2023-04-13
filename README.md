@@ -1,9 +1,9 @@
 # info
 :+1:
 
-- [ ] IPC für S:\318. iwis Laserschweissanlage MIDI richten
-- [ ] Matthias alter Laptop als neuen CAD Laptop richten
-- [ ] Shutdown Button im FPZ
+- [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
+- [x] Matthias alter Laptop als neuen CAD Laptop richten
+- [x] Shutdown Button im FPZ kann entfallen Panel fährt bei kurz drücken des Einschalters herunter
 - [ ] De Nobile - wegen PV - Finkenweg
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
 - [ ] https://github.com/hawiwo/FP2
@@ -71,7 +71,16 @@ netstat -e -t 5
 [Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
 
 ## D
-
+### Defender
+#### Regeln hinzufügen
+```
+netsh advfirewall firewall add rule name="FirebirdSQL" dir=in action=allow protocol=TCP localport=3050
+netsh advfirewall firewall add rule name="UDC" dir=in action=allow protocol=UDP localport=2001
+```
+#### Firewall ausschalten
+```
+netsh advfirewall set allprofiles state off
+```
 ## E
 Windows Explorer neu starten
 ```
@@ -79,6 +88,40 @@ tasklist /f /im explorer.exe
 start explorer.exe
 exit
 ```
+### Embarcadero Support Calls
+#### 13.04.2023
+
+<details>
+<summary>Verfasst aber nicht erstellt, weil sich das Problem nach Neuinstallation erledigt hat.</summary>
+
+```
+Hello,
+after running patch.R113.patch1_install.bat
+RAD Studio starts with
+-------------------------------
+Applicaiton Error
+Exception EConvertError in Modul rtl280.bpl bei 00048847.
+format 'Thread %d' ungültig oder nicht kompatibel mit Argument.
+-------------------------------
+this error persists even after successful executing patch.R113.patch1_uninstall.bat
+so RAD Studio doesn't run anymore.
+
+i have some further information:
+1. after my first install of RADStudio_11_3_28_12819a.iso the splash screen was not updated it shows RAD Studio 11.2
+   even though some features of 11.3 were available (the new c++ code formatter) the Help->Info showed no indicaiton 
+   of version 
+   11.3. others i could not find. Anyway i will deinstall and reinstall RAD Studio from ISO and retry the patch. 
+
+2. GetIt had not offered this patch
+3. On Fr. 31.03.23 S.Axtell noted two sets of contact details in your portal and resettet it sucessfully
+   currently i have 2 Accounts
+    harald.wolf@ulmergmbh.de  the old one and
+    harald.wolf@ulmer-automation.de   with the new (since some years) address.
+   both are working but only the old @ulmergmbh.de account offers Registered Products info and downloads.
+``` 
+
+</details>
+
 ## F
 ## G
 ## H
@@ -96,11 +139,62 @@ cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSW
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
 ## L
+### Linux
+#### find
+C't 2/14 S.158 Linux Dateizauber
+Hier ermittelt find alle Dateien, die vor fünf bis zehn Minuten modifiziert wurden, und führt
+für jede Datei den Befehl hinter -exec aus. {} wird dabei durch den Dateinamen ersetzt.
+```
+find . -mmin +5 -mmin -10 -exec sh -c 'cp {} temp' \;
+```
+#### ffmpeg
+```
+ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
+ffmpeg -i img%04d.jpeg tl.mp4
+ffmpeg -i 'img%05d.jpeg' tl.mp4
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1920×1080 timelapse_1080P.mp4
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k timelapse_1080P.mp4
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1920×1080 timelapse_1080P.mp4
+ffmpeg -i img00088.jpeg
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 2592×1944 timelapse_1080P.mp4
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1024x768 timelapse_1080P.mp4
+ffmpeg -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 2048x1536 timelapse_1080P.mp4
+ffmpeg -y -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 2048x1536 timelapse_1080P.mp4
+ffmpeg -y -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1920x1080 timelapse_1080P.mp4
+ffmpeg -y -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1920x1080 timelapse_1080P.mp4
+ffmpeg -y -framerate 1/5 -f image2 -start_number 0047 -i img%05d.jpeg -vcodec libx264 -b:v 5000k -s 1920x1080 timelapse_1080P.mp4
+ffmpeg -y -f image2 -start_number 0047 -i img%05d.jpeg -c:v libx264 -vf fps=25 -pix_fmt yuv420p -s 1920x1080 timelapse_1080P.mp4
+ffmpeg -y -framerate 1 -f image2 -start_number 0047 -i img%05d.jpeg -c:v libx264 -vf fps=25 -pix_fmt yuv420p -s 1920x1080 timelapse_1080P.mp4
+ffmpeg -y -f image2 -start_number 0047 -i img%05d.jpeg -c:v libx264 -vf fps=25 -pix_fmt yuv420p -s 1920x1080 timelapse_1080P.mp4
+history | grep ffmpeg
+ffmpeg -i '%*.jpeg' tl.mp4
+ffmpeg -y -framerate 25 -i '%*.jpeg' tl.mp4
+ffmpeg -y -framerate 15 -i '%*.jpeg' tl.mp4
+ffmpeg -y -framerate 15 -i '%*.jpeg' tl.mp4
+ffmpeg -y -framerate 15 -i '%*.jpeg' tl.mp4
+time ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
+ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
+```
+
+
 ## M
 ### Markdown
 [git markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ### Malu 08:00-09:00 und 13:00-14:00
 ## N
+### netsh
+#### Wie findet man heraus, mit welchem WLAN-Access-Point Windows 10 gerade verbunden ist?
+```
+netsh wl sh
+netsh wlan show profile
+netsh interface tcp show
+netsh wlan show all
+netsh wlan show wirelesscap
+```
+[Internet-Engpässe mit Windows-Tools aufspüren](https://www.heise.de/select/ct/2019/18/1566751172306991)
+```
+netsh int tcp set global autotuninglevel=normal
+```
 ## O
 ## P
 ### Projekte Bezeichnungen und Kürzel
@@ -143,6 +237,14 @@ Zur Zeit aktive Rufkanäle:	2
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 ### Shortcuts
 [Tastenkombinationen](https://knowledge.starface.de/display/SWD/Tastenkombinationen+am+Telefon)
+
+### Sysinternals updaten
+```
+net use \\live.sysinternals.com\tools
+xcopy \\live.sysinternals.com\tools\*.* %userprofile%\downloads\sysinternals\ /y /d
+net use \\live.sysinternals.com\tools /d
+```
+
 ## T
 ## U
 ### UL Microsoft Netzwerk
@@ -386,6 +488,12 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 
 ## V
 ## W
+### Wireshark
+```
+frame.time_delta > 0.01 and data.data contains 0099 and ip.src == 172.16.47.15
+```
+#### Display filter
+
 ### WMIC
 ```
 wmic /node:FJCM172D2E bios get serialnumber
