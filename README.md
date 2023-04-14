@@ -1,17 +1,18 @@
 ﻿# info
 :+1:
 
-- [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
-- [x] Matthias alter Laptop als neuen CAD Laptop richten
-- [x] Shutdown Button im FPZ kann entfallen Panel fährt bei kurz drücken des Einschalters herunter
-- [ ] De Nobile - wegen PV - Finkenweg
+- [ ] AIM Anstehende Projekt [a](#### 273 AIM_Automatisierung MMA)
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
 - [ ] https://github.com/hawiwo/FP2
 - [ ] HP-Z440 neu aufsetzten
 - [ ] Raspberry PI in Drehspinner einbauen
-- [ ] Projekte Laufwerk im Zeitraum 10.03.23-12.03.23 um 11GB gewachsen - Das könnte noch 12 Monate so gehen dann wäre Ende
-- [ ] AIM Anstehende Projekt
 - [ ] S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
+- [ ] De Nobile - wegen PV - Finkenweg
+- [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
+- [x] Matthias alter Laptop als neuen CAD Laptop richten
+- [x] Shutdown Button im FPZ kann entfallen Panel fährt bei kurz drücken des Einschalters herunter
+
+- [x] Projekte Laufwerk im Zeitraum 10.03.23-12.03.23 um 11GB gewachsen - Das könnte noch 12 Monate so gehen dann wäre Ende
 
 ## Wanted
 - [ ] 3 Hanf Pflanzen (Haschisch)
