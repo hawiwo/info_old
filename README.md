@@ -50,10 +50,12 @@ Future task2               :         des4, after des3, 5d
 ```
 getmac /v
 powercfg /energy
+
 assoc
 assoc .MP4=VLC.vlc
 sfc /scannow
 DISM /Online /Cleanup-Image [/CheckHealth | /ScanHealth | /RestoreHealth]
+
 tasklist | findstr script
 taskkill /f /pid 1234
 netsh wlan show wlanreport
@@ -140,6 +142,8 @@ i have some further information:
 
 ## F
 ## G
+### Git
+
 ## H
 ## I
 ```
@@ -273,15 +277,13 @@ mklink /J j:\public\90_Download d:\90_Download
 
 erneut erstellt werden.
 
-## DECT
+#### DECT
 
-#### 
-
-#### 15.9.21
+##### 15.9.21
 
 N870 ist Basisstation und Dect Manager in einem und kostet 321€ z.Zt. nicht Verfügbar Lieferzeit 90 Tage nicht garantiert.
 
-#### 20.8.21
+##### 20.8.21
 
 Dect-Manager -> Netzwerk und Anschlüsse -> Ereignisse in Basisstationen
 
@@ -291,14 +293,14 @@ Halle 2 mit Busy 184 (LAN-UV-2 Cl.1 udn SyncL.2)
 
 an Basisstationen überlastet. Deshalb habe ich ungenutzte versetzt.
 
-### WLAN
+#### WLAN
 
 xD!8i*avt
 UG220330
 
 25.8. Controller->IPv6->Global IPv6 Config auf disabled gesetzt
 
-### Office365
+#### Office365
 
 office: ulmerautomation-de01c.mail.protection.outlook.com
 
@@ -366,10 +368,6 @@ wwan0
 
 https://my.hidrive.com/share/24zbyzcp6q
 
-First Header  | Second Header
-------------- | -------------
-  Content Cell  | Content Cell
-  Content Cell  | Content Cell
 
 Name |Passwort | LastChange |PC Name | Win10 Key
 -------------------|----------------------------------------------- |-------------|------------------------|------------------------
@@ -427,19 +425,19 @@ CAD-Laptop|MU Alter||FJH770EDBF|P2PQ6-GJNPY-4QWMR-QQFKY-R6YP2
 A.b.baeuerle@freenet.de
 1320derherristmeinhirte
 
-# Switch
+### Switch
 
-## Port<->MAC Identifikation
+#### Port<->MAC Identifikation
 
-### Aruba 2930F
+##### Aruba 2930F
 
 68847e-92d736
 
 
 
-## Konfigurationen
+#### Konfigurationen
 
-#### LAN-UV-04	Halle (Hermle C650)
+##### LAN-UV-04	Halle (Hermle C650)
 
 | Port | Host              |
 | ---- | ----------------- |
@@ -450,11 +448,11 @@ A.b.baeuerle@freenet.de
 | 5    | 00:17:C8:79:D1:67 |
 |      |                   |
 
-# Telekom
+## Telekom
 [allestörungen](https://allestörungen.de/)
 [netzausfall](https://www.netzausfall.net/)
     
-## Kontakt
+#### Kontakt
 
 Telekom Kundennummer 1920006802
 IBAN DE10 6049 1430 0078 1960 00
@@ -462,15 +460,15 @@ Telekom Geschäftskunden
 nur Festnetz 0800 3302870
 nur Mobile 0800 3302828
 
-## Leitungen
-### 07147-220330
+### Leitungen
+#### 07147-220330
 SIP Trunc Hauptnetz  VDSL100
 4 Eingehende Zeitgleich
 4 Ausgehende Zeitgleich
 Zyxel VMG1312-B30A
 LEDs Normal: 
 
-### 07147675
+#### 07147675
 Gastzugang auf der Nummer 8 VDSL100
 Fritzbox 7430
 
@@ -492,9 +490,9 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 # Links
 [Github Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-# Gesprächsprotokoll
+### Gesprächsprotokoll
 
-## Matthias
+#### Matthias
 
 15.11.21 12:40	Alle Azubi-Accounts löschen und ein Azubi Account anlegen.
 
@@ -511,10 +509,12 @@ frame.time_delta > 0.01 and data.data contains 0099 and ip.src == 172.16.47.15
 #### Display filter
 
 ### WMIC
+Informationen von Nodes abfragen
 ```
 wmic /node:FJCM172D2E bios get serialnumber
 wmic path win32_VideoController get name, driverversion
 wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
+wmic /node:localhost /Namespace:\\root\SecurityCenter2 Path AntiVirusProduct  Get displayName,timestamp /Format:List    
 ```
 [Alles-Verwalter - Windows clever managen mit WMI](https://www.heise.de/select/ct/2019/2/1546680468035288)
 
