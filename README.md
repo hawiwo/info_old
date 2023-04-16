@@ -18,6 +18,19 @@
 - [ ] 3 Hanf Pflanzen (Haschisch)
 
 ## Aktuell
+### Top Aktuell
+#### Wortschöprungen
+- Alleinbeteiligt
+- Alleinunfall
+- Ungedanken
+- Bedarfshaltestelle
+- Belebungsbecken (Es ist das Kernstück einer biologischen Kläranlage.)
+- bipedal, Bipedie (Wie so ’ne exotische Krankheit, eine Verhaltensauffälligkeit oder tiefgreifende Entwicklungsstörung. Ist es auch.
+Gemeint ist nämlich die Fortbewegung von Lebewesen auf zwei Füßen – das Ganze gehend, laufend oder hüpfend. Vögel machen so was. Und Menschen. Und genau darin liegt die Störung: Der Mensch hätte sich in seiner Entwicklung nie zum Zweibeiner mit aufrechtem Gang entwickeln dürfen…)
+- blümerant (Jemandem ist blümerant zumute? Dieses Wort wird vermutlich aussterben. Wie das Blau von dem es erzählt, denn das sterbende Blau „bleu mourant“ liefert die Wortwurzel für diese Gefühlsbeschreibung. flau, unwohl, übel)
+- bonfortionös (Das Wort bomfortionös wurde durch Publikumsabstimmung zum schönsten Sächsischen Wort des Jahres 2011 gewählt. Als bomfortionös bezeichnen wir etwas Großartiges, das bisweilen etwas pompös sein kann.)
+
+
 ### Ausprobieren
 1. [RAD Studio 11.3 neue Features]()
 
@@ -66,6 +79,32 @@ netstat -e -t 5
 ```
 ## A
 ## B
+### Brunner
+Puffer Temperaturen auslesen und als CSV speichern
+```bash
+#!/bin/bash
+
+csv=""
+for y in 240 290 340
+do
+	/usr/bin/vncdotool -s 192.168.178.93 rcapture /home/harry/tmp.png 482 $y 55 40
+	/usr/bin/convert /home/harry/tmp.png -colorspace Gray /home/harry/tmp.png
+	po=$(/usr/bin/tesseract -l deu --dpi 300 /home/harry/tmp.png stdout)
+	npo=$(echo ${po} | /usr/bin/awk '{print $1}')	
+	csv="$csv $npo"
+done
+date=$(date +"%y.%m.%d %H:%M")
+csv="$date $csv"
+
+
+echo ${csv} >> puffer_oben.dat
+
+#if [ "${npo}" -lt "60" ]
+#then	
+#	zenity --info --text=${npo}
+#fi
+
+```
 ## C
 ### C++
 #### C++ 17
@@ -200,6 +239,13 @@ ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 ## M
 ### Markdown
 [git markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+### Dokument links erstellen
+```
+[ffmpeg](#ffmpeg)
+```
+wobei das # nur einfach angegeben weden muss auch wenn es mehrfach existiert.
+
 ### Malu 08:00-09:00 und 13:00-14:00
 ## N
 ### netsh
@@ -501,7 +547,16 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 überzeiten abrechen
 
 ## V
+### vncdotool
+vnc Screenshots erstellen
+```
+for i in {1..99999}; do vncdotool -s 192.168.178.93 capture img_$(printf "%05d" $i).png; sleep 60; done
+```
+
+
 ## W
+### Waldhof
+
 ### Wireshark
 ```
 frame.time_delta > 0.01 and data.data contains 0099 and ip.src == 172.16.47.15
