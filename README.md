@@ -182,7 +182,14 @@ i have some further information:
 ## F
 ## G
 ### Git
-
+#### Arbeitsverzeichnis zurücksetzen
+```
+git reset --hard HEAD
+```
+um sicher zu gehen, dass auch die Staging-Area zurückgesetzt wird
+```
+git reset HEAD --hard
+```
 ## H
 ## I
 ```
