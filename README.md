@@ -119,17 +119,17 @@ echo ${csv} >> puffer_oben.dat
 ## D
 ### Defender
 #### Regeln hinzufügen
-```
+```cmd
 netsh advfirewall firewall add rule name="FirebirdSQL" dir=in action=allow protocol=TCP localport=3050
 netsh advfirewall firewall add rule name="UDC" dir=in action=allow protocol=UDP localport=2001
 ```
 #### Firewall ausschalten
-```
+```cmd
 netsh advfirewall set allprofiles state off
 ```
 ## E
 Windows Explorer neu starten
-```
+```cmd
 tasklist /f /im explorer.exe
 start explorer.exe
 exit
@@ -183,16 +183,16 @@ i have some further information:
 ## G
 ### Git
 #### Arbeitsverzeichnis zurücksetzen
-```
+```cmd
 git reset --hard HEAD
 ```
 um sicher zu gehen, dass auch die Staging-Area zurückgesetzt wird
-```
+```cmd
 git reset HEAD --hard
 ```
 ## H
 ## I
-```
+```cmd
 ipconfig /all | findstr DNS
 ipconfig /displaydns | clip
 ```
@@ -200,7 +200,7 @@ ipconfig /displaydns | clip
 ## K
 ### Keepass 2
 #### URL-Overrides
-```
+```cmd
 cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && cmdkey /delete:TERMSRV/{URL:RMVSCM}"
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
@@ -210,11 +210,11 @@ cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 C't 2/14 S.158 Linux Dateizauber
 Hier ermittelt find alle Dateien, die vor fünf bis zehn Minuten modifiziert wurden, und führt
 für jede Datei den Befehl hinter -exec aus. {} wird dabei durch den Dateinamen ersetzt.
-```
+```cmd
 find . -mmin +5 -mmin -10 -exec sh -c 'cp {} temp' \;
 ```
 #### ffmpeg
-```
+```bash
 ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 ffmpeg -i img%04d.jpeg tl.mp4
 ffmpeg -i 'img%05d.jpeg' tl.mp4
@@ -257,7 +257,7 @@ wobei das # nur einfach angegeben weden muss auch wenn es mehrfach existiert.
 ## N
 ### netsh
 #### Wie findet man heraus, mit welchem WLAN-Access-Point Windows 10 gerade verbunden ist?
-```
+```cmd
 netsh wl sh
 netsh wlan show profile
 netsh interface tcp show
@@ -265,7 +265,7 @@ netsh wlan show all
 netsh wlan show wirelesscap
 ```
 [Internet-Engpässe mit Windows-Tools aufspüren](https://www.heise.de/select/ct/2019/18/1566751172306991)
-```
+```cmd
 netsh int tcp set global autotuninglevel=normal
 ```
 ## O
@@ -312,7 +312,7 @@ Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 [Tastenkombinationen](https://knowledge.starface.de/display/SWD/Tastenkombinationen+am+Telefon)
 
 ### Sysinternals updaten
-```
+```cmd
 net use \\live.sysinternals.com\tools
 xcopy \\live.sysinternals.com\tools\*.* %userprofile%\downloads\sysinternals\ /y /d
 net use \\live.sysinternals.com\tools /d
@@ -324,7 +324,7 @@ net use \\live.sysinternals.com\tools /d
 
 Der Ordner 90_Download ist auf ein RDX-Laufwerk ausgelagert um die tägliche Datenwicherung (?) zu vermeiden. Falls der Link nicht mehr funktioniert muss das Verzeichnis \\\public\90_Download (deadlink) gelöscht werden und mit mit:
 
-```
+```cmd
 mklink /J j:\public\90_Download d:\90_Download
 ```
 
@@ -557,7 +557,7 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 ## V
 ### vncdotool
 vnc Screenshots erstellen
-```
+```bash
 for i in {1..99999}; do vncdotool -s 192.168.178.93 capture img_$(printf "%05d" $i).png; sleep 60; done
 ```
 
@@ -566,14 +566,15 @@ for i in {1..99999}; do vncdotool -s 192.168.178.93 capture img_$(printf "%05d" 
 ### Waldhof
 
 ### Wireshark
+#### Display filter
 ```
 frame.time_delta > 0.01 and data.data contains 0099 and ip.src == 172.16.47.15
 ```
-#### Display filter
+
 
 ### WMIC
 Informationen von Nodes abfragen
-```
+```cmd
 wmic /node:FJCM172D2E bios get serialnumber
 wmic path win32_VideoController get name, driverversion
 wmic /node:TPP530B59 computersystem get model,name,manufacturer,systemtype
