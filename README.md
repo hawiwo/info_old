@@ -60,7 +60,7 @@ Future task2               :         des4, after des3, 5d
 ```
 </details>
 
-```
+```bash
 getmac /v
 powercfg /energy
 
@@ -180,7 +180,7 @@ i have some further information:
 </details>
 
 ## F
-``` 
+```bash 
 for VARIABLE in LISTE; do Befehle; done
 ``` 
 
@@ -219,6 +219,10 @@ für jede Datei den Befehl hinter -exec aus. {} wird dabei durch den Dateinamen 
 find . -mmin +5 -mmin -10 -exec sh -c 'cp {} temp' \;
 ```
 #### ffmpeg
+
+<details>
+<summary>Beispiele</summary>
+
 ```bash
 ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 ffmpeg -i img%04d.jpeg tl.mp4
@@ -246,6 +250,7 @@ ffmpeg -y -framerate 15 -i '%*.jpeg' tl.mp4
 time ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 ```
+</details>
 
 
 ## M
@@ -303,7 +308,7 @@ Fax:+49 (7941) - 9136 52
 ## Q
 ### qemu
 #### Raspberry PI
-```
+```bash
 sudo qemu-system-arm -kernel Downloads/kernel-qemu-4.4.34-jessie \
 -cpu arm1176 \
 -m 256 \
@@ -313,10 +318,70 @@ sudo qemu-system-arm -kernel Downloads/kernel-qemu-4.4.34-jessie \
 -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" \
 -drive file=bienenwage.img,index=0,media=disk,format=raw
 ``` 
+
+<details>
+<summary>Biespiele</summary>
+
+
+```bash
+sudo qemu-system-x86_64 -enable-kvm -machine type=q35 -cpu host,hv-relaxed,hv-vapic,hv-spinlocks=0x1fff,hv-time -device qemu-xhci -device usb-tablet -boot menu=on -net nic -net user,hostname=windows1064 -m 4G -monitor stdio -name "Windows 10 64 bits" -usb /mnt/qemu/win.img
+
+qemu-img create arch.img 15G
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda arch.img -cdrom Downloads/archlinux-2016.12.01-dual.iso -boot order=d -drive file=arch.img,format=raw
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda arch.img
+qemu-img create -o backing_file=arch.img,backing_fmt=raw -f qcow2 img1.cow
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda img1.cow
+
+Host A
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda img1.cow -net nic -net socket,listen=:8010
+ip link set ens3 up
+ip addr add 192.168.1.2/24 dev ens3
+
+Host B
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda img1.cow -net nic,vlan=2 -net socket,vlan=2,connect=127.0.0.1:8010
+ip link set ens3 up
+ip addr add 192.168.1.2/24 dev ens3
+
+SSH-Login
+qemu-system-x86_64 -enable-kvm -k en-us -m 2048 -hda img1.cow -net user,hostfwd=tcp::10022-:22 -net nic
+
+qemu-system-x86_64 -enable-kvm \
+-nodefaults \
+-cpu host \
+-smp 2 \
+-m 2048 \
+-k de \
+-vga std \
+-monitor vc \
+-drive file=/home/harry/arch.img,if=virtio,media=disk \
+-drive file=/home/harry/Downloads/archlinux-2016.12.01-dual.iso,if=ide,media=cdrom \
+-boot menu=on
+
+-display vnc=199.200.1.110:0 \
+-net nic,model=virtio,macaddr=08:00:27:35:45:A8 \
+-net bridge,br=net3b -net nic,model=virtio,vlan=1,macaddr=08:00:27:35:45:A9 \
+-net bridge,vlan=1,br=net0b \
+-drive file=/home/testing/data/qemu/arch/arch_0.qcow,if=virtio,media=disk \
+-drive file=/mnt/bucket/Downloads/isos/Linux/archlinux-2013.04.01-dual.iso,if=ide,media=cdrom \
+
+
+
+qemu-system-x86_64 \
+-enable-kvm \
+-m 2048 \
+-k de \
+-drive file=/home/harry/arch.img,if=virtio,media=disk \
+-drive file=/home/harry/Downloads/archlinux-2016.12.01-dual.iso,if=ide,media=cdrom \
+-boot menu=on \
+-nographic \
+-curses
+```
+</details>
+
 ## R
 ## S
 Computer neu starten und direkt ins BIOS
-```
+```cmd
 shutdown /r /fw /f /t 0
 ```
 ### Starface
