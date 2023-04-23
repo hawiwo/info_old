@@ -296,6 +296,18 @@ Tel.:+49 (7941) - 9136 123
 Fax:+49 (7941) - 9136 52
 ```
 ## Q
+### qemu
+#### Raspberry PI
+```
+sudo qemu-system-arm -kernel Downloads/kernel-qemu-4.4.34-jessie \
+-cpu arm1176 \
+-m 256 \
+-M versatilepb \
+-no-reboot \
+-serial stdio \
+-append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" \
+-drive file=bienenwage.img,index=0,media=disk,format=raw
+``` 
 ## R
 ## S
 Computer neu starten und direkt ins BIOS
