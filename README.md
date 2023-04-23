@@ -180,6 +180,10 @@ i have some further information:
 </details>
 
 ## F
+``` 
+for VARIABLE in LISTE; do Befehle; done
+``` 
+
 [for loop](#vncdotool)
 ## G
 ### Git
