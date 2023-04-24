@@ -1,12 +1,11 @@
 ﻿# info
 :+1:
 
-- [ ] AIM Anstehende Projekt [a](#### 273 AIM_Automatisierung MMA) [AIM](#273MA)
+- [ ] AIM Anstehende Projekt [AIM](#273) 
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
 - [ ] https://github.com/hawiwo/FP2
 - [ ] HP-Z440 neu aufsetzten
 - [ ] Raspberry PI in Drehspinner einbauen
-- [ ] S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
 - [ ] De Nobile - wegen PV - Finkenweg
 - [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
 - [x] Matthias alter Laptop als neuen CAD Laptop richten
@@ -286,9 +285,14 @@ netsh int tcp set global autotuninglevel=normal
 ## O
 ## P
 ### Projekte Bezeichnungen und Kürzel
-#### 273 AIM_Automatisierung MMA
+#### 73
+KK3
+
+#### 273
+AIM_Automatisierung MMA
 S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
-#### 301. WE_Verpassanlage
+#### 301
+Willie Elbe WE_Verpassanlage
 Klaus K.
 ```
 Patrick Dietzel
@@ -299,7 +303,8 @@ D - 98639 Rippershausen
 Tel.:+49 (3693) - 8993 272
 Fax:+49 (3693) - 8993 20
 ```
-#### 306. WE_Montage_Lenkspindel
+#### 306
+WE_Montage_Lenkspindel
 ```
 Intern A.Mazioschek
 Andreas Rieger
