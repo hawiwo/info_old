@@ -1,7 +1,7 @@
 ﻿# info
 :+1:
 
-- [ ] AIM Anstehende Projekt [a](#### 273 AIM_Automatisierung MMA)
+- [ ] AIM Anstehende Projekt [a](#### 273 AIM_Automatisierung MMA) [AIM](#273MA)
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
 - [ ] https://github.com/hawiwo/FP2
 - [ ] HP-Z440 neu aufsetzten
@@ -106,6 +106,11 @@ echo ${csv} >> puffer_oben.dat
 
 ```
 ## C
+### C++Builder
+#### 
+```
+copy -y $(OUTPUTPATH) C:\usr\bin
+```
 ### C++
 #### C++ 17
 ### c't
@@ -305,6 +310,9 @@ D - 74629 Pfedelbach
 Tel.:+49 (7941) - 9136 123
 Fax:+49 (7941) - 9136 52
 ```
+### Powershell
+[Batch Ruft Poweshell](https://github.com/hawiwo/scripts/blob/0c6d73e0d38e22f18af1b87df9a5c6846ff922e4/skeleton/Batch_Ruft_Powershell.txt)
+
 ## Q
 ### qemu
 #### Raspberry PI
@@ -665,3 +673,5 @@ wmic /node:localhost /Namespace:\\root\SecurityCenter2 Path AntiVirusProduct  Ge
 [Alles-Verwalter - Windows clever managen mit WMI](https://www.heise.de/select/ct/2019/2/1546680468035288)
 
 [PowerShell and WMI: Covers 150 Practical Techniques](https://www.amazon.de/PowerShell-WMI-Richard-Siddaway/dp/1617290114/ref=sr_1_14?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UM12TY4GOG31&keywords=wmi&qid=1679813751&s=books&sprefix=wmi%2Cstripbooks%2C102&sr=1-14)
+
+### WSB
