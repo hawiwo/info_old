@@ -1,19 +1,22 @@
-﻿# info
+# info
 :+1:
 
 - [ ] AIM Anstehende Projekt [AIM](#273) 
+- [ ] KK3 [KK3](#73)
+- [ ] python4delphi dokumentieren
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
 - [ ] https://github.com/hawiwo/FP2
-- [ ] HP-Z440 neu aufsetzten
+- [ ] HP-Z440 Restliche Treiber installieren
 - [ ] Raspberry PI in Drehspinner einbauen
-- [ ] De Nobile - wegen PV - Finkenweg
+- [x] UFPS und UFPStest zusammengeführt. Beide Anwendungen laufen jetzt auf ufps.fdb
+- [x] De Nobile - wegen PV - Finkenweg
 - [x] IPC für S:\318. iwis Laserschweissanlage MIDI richten (Lars)
 - [x] Matthias alter Laptop als neuen CAD Laptop richten
 - [x] Shutdown Button im FPZ kann entfallen Panel fährt bei kurz drücken des Einschalters herunter
 
 - [x] Projekte Laufwerk im Zeitraum 10.03.23-12.03.23 um 11GB gewachsen - Das könnte noch 12 Monate so gehen dann wäre Ende
 
-## Wanted
+# Wanted
 - [ ] 3 Hanf Pflanzen (Haschisch)
 - [ ] C++ Code der Ausreißer findet
 
@@ -80,9 +83,9 @@ int main() {
 ```
 </details>
 
-## Aktuell
-### Top Aktuell
-#### Wortschöprungen
+# Aktuell
+## Top Aktuell
+### Wortschöprungen
 - Alleinbeteiligt
 - Alleinunfall
 - Ungedanken
@@ -94,7 +97,7 @@ Gemeint ist nämlich die Fortbewegung von Lebewesen auf zwei Füßen – das Gan
 - bonfortionös (Das Wort bomfortionös wurde durch Publikumsabstimmung zum schönsten Sächsischen Wort des Jahres 2011 gewählt. Als bomfortionös bezeichnen wir etwas Großartiges, das bisweilen etwas pompös sein kann.)
 
 
-### Ausprobieren
+## Ausprobieren
 1. [RAD Studio 11.3 neue Features]()
 
 <details>
@@ -140,9 +143,9 @@ netstat -af         0.0.0.0:3423   LISTENING       der rechner hört auf jede ip
 netstat -o
 netstat -e -t 5
 ```
-## A
-## B
-### Brunner
+# A
+# B
+## Brunner
 Puffer Temperaturen auslesen und als CSV speichern
 ```bash
 #!/bin/bash
@@ -168,47 +171,53 @@ echo ${csv} >> puffer_oben.dat
 #fi
 
 ```
-## C
-### C++Builder
-#### 
+# C
+## C++Builder
+
+Build Ergebnis **(.exe)** in ein Verzeichnis kopieren
 ```
 copy -y $(OUTPUTPATH) C:\usr\bin
 ```
-### C++
-#### C++ 17
-### c't
-#### Projektseiten
+## C++
+### C++ 17
+## CMD
+Dateien in eine Variable einlesen
+```
+set /p FA-Nr=<FA-Nr.txt
+```
+## c't
+### Projektseiten
 [Der optimale PC](https://www.heise.de/ratgeber/Projektseite-Der-Optimale-PC-2023-7349205.html)
-#### WIMage
+### WIMage
 [Projektseite](https://www.heise.de/hintergrund/c-t-WIMage-Stand-16-10-2017-3863074.html)
 
 [Tuning: MS-Defender ExclusionProcess](https://www.heise.de/forum/c-t/Kommentare-zu-c-t-Artikeln/c-t-WIMage/Tuning-MS-Defender-ExclusionProcess/posting-38144340/show/#posting_38144340)
 
-## D
-### Defender
-#### Regeln hinzufügen
+# D
+## Defender
+### Regeln hinzufügen
 ```cmd
 netsh advfirewall firewall add rule name="FirebirdSQL" dir=in action=allow protocol=TCP localport=3050
 netsh advfirewall firewall add rule name="UDC" dir=in action=allow protocol=UDP localport=2001
 ```
-#### Firewall ausschalten
+### Firewall ausschalten
 ```cmd
 netsh advfirewall set allprofiles state off
 ```
-## E
+# E
 Windows Explorer neu starten
 ```cmd
 tasklist /f /im explorer.exe
 start explorer.exe
 exit
 ```
-### Embarcadero
-#### Alexandria 11.3
+## Embarcadero
+### Alexandria 11.3
 
-#### Embarcadero Support Calls
-##### 13.04.2023
+### Embarcadero Support Calls
+#### 13.04.2023
 Patch.R113.Patch1-20230404.zip installiert
-#### Testen
+### Testen
 VCL TControlList control
 
 QuickEdit designers for VCL, including additional items in the designer menu, a pane for
@@ -247,15 +256,17 @@ i have some further information:
 
 </details>
 
-## F
+# F
 ```bash 
 for VARIABLE in LISTE; do Befehle; done
 ``` 
 
 [for loop](#vncdotool)
-## G
-### Git
-#### Arbeitsverzeichnis zurücksetzen
+# G
+
+
+## Git
+### Arbeitsverzeichnis zurücksetzen
 ```cmd
 git reset --hard HEAD
 ```
@@ -263,30 +274,30 @@ um sicher zu gehen, dass auch die Staging-Area zurückgesetzt wird
 ```cmd
 git reset HEAD --hard
 ```
-## H
-## I
+# H
+# I
 ```cmd
 ipconfig /all | findstr DNS
 ipconfig /displaydns | clip
 ```
-## J
-## K
-### Keepass 2
-#### URL-Overrides
+# J
+# K
+## Keepass 2
+### URL-Overrides
 ```cmd
 cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && cmdkey /delete:TERMSRV/{URL:RMVSCM}"
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
-## L
-### Linux
-#### find
+# L
+## Linux
+### find
 C't 2/14 S.158 Linux Dateizauber
 Hier ermittelt find alle Dateien, die vor fünf bis zehn Minuten modifiziert wurden, und führt
 für jede Datei den Befehl hinter -exec aus. {} wird dabei durch den Dateinamen ersetzt.
 ```cmd
 find . -mmin +5 -mmin -10 -exec sh -c 'cp {} temp' \;
 ```
-#### ffmpeg
+### ffmpeg
 
 <details>
 <summary>Beispiele</summary>
@@ -321,20 +332,20 @@ ffmpeg -y -framerate 45 -i '%*.jpeg' tl.mp4
 </details>
 
 
-## M
-### Markdown
+# M
+## Markdown
 [git markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-### Dokument links erstellen
+## Dokument links erstellen
 ```
 [ffmpeg](#ffmpeg)
 ```
 wobei das # nur einfach angegeben weden muss auch wenn es mehrfach existiert.
 
-### Malu 08:00-09:00 und 13:00-14:00
-## N
-### netsh
-#### Wie findet man heraus, mit welchem WLAN-Access-Point Windows 10 gerade verbunden ist?
+## Malu 08:00-09:00 und 13:00-14:00
+# N
+## netsh
+### Wie findet man heraus, mit welchem WLAN-Access-Point Windows 10 gerade verbunden ist?
 ```cmd
 netsh wl sh
 netsh wlan show profile
@@ -346,16 +357,17 @@ netsh wlan show wirelesscap
 ```cmd
 netsh int tcp set global autotuninglevel=normal
 ```
-## O
-## P
-### Projekte Bezeichnungen und Kürzel
-#### 73
-KK3
+# O
+# P
+## Projekte Bezeichnungen und Kürzel
+## Interne Projekte
+### 73
+[KK3](https://github.com/hawiwo/77.2_KK3)
 
-#### 273
+### 273
 AIM_Automatisierung MMA
 S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
-#### 301
+### 301
 Willie Elbe WE_Verpassanlage
 Klaus K.
 ```
@@ -367,7 +379,7 @@ D - 98639 Rippershausen
 Tel.:+49 (3693) - 8993 272
 Fax:+49 (3693) - 8993 20
 ```
-#### 306
+### 306
 WE_Montage_Lenkspindel
 ```
 Intern A.Mazioschek
@@ -379,12 +391,15 @@ D - 74629 Pfedelbach
 Tel.:+49 (7941) - 9136 123
 Fax:+49 (7941) - 9136 52
 ```
-### Powershell
+## Powershell
 [Batch Ruft Poweshell](https://github.com/hawiwo/scripts/blob/0c6d73e0d38e22f18af1b87df9a5c6846ff922e4/skeleton/Batch_Ruft_Powershell.txt)
 
-## Q
-### qemu
-#### Raspberry PI
+## Python
+### UDCCheck
+
+# Q
+## qemu
+### Raspberry PI
 ```bash
 sudo qemu-system-arm -kernel Downloads/kernel-qemu-4.4.34-jessie \
 -cpu arm1176 \
@@ -455,31 +470,89 @@ qemu-system-x86_64 \
 ```
 </details>
 
-## R
-## S
+# R
+# S
 Computer neu starten und direkt ins BIOS
 ```cmd
 shutdown /r /fw /f /t 0
 ```
-### Starface
+## Starface
+[Support Ticket](https://www.starface.de/support/de/ticket.php)
 #### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
 ```
 Zur Zeit aktive Rufkanäle:	2
 ```
 Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
-### Shortcuts
+## Shortcuts
 [Tastenkombinationen](https://knowledge.starface.de/display/SWD/Tastenkombinationen+am+Telefon)
 
-### Sysinternals updaten
+<details>
+<summary>Ticket 7816224 24.04.2023</summary>
+Rufkanäle
+</details>
+
+
+## Sysinternals updaten
 ```cmd
 net use \\live.sysinternals.com\tools
 xcopy \\live.sysinternals.com\tools\*.* %userprofile%\downloads\sysinternals\ /y /d
 net use \\live.sysinternals.com\tools /d
 ```
 
-## T
-## U
-### UL Microsoft Netzwerk
+# T
+## Telekom
+[Kundencenter](https://www.telekom.de/mein-kundencenter) [gerd.ulmer@t-online.de](mailto:gerd.ulmer@t-online.de) gu270651
+
+[allestörungen](https://allestörungen.de/)
+[netzausfall](https://www.netzausfall.net/)
+    
+## Kontakt
+Telekom Kundennummer **192 000 680 2**
+IBAN **DE10 6049 1430 0078 1960 00**
+Telekom Geschäftskunden
+nur Festnetz 0800 3302870
+nur Mobile 0800 3302828
+
+<details>
+<summary>Telefonate/Störungen</summary>
+25.04.2023 Sprachkanäle
+</details>
+
+## Leitungen
+### **07147-220330**
+VDSL 100 IP (BNG) Vertragsbeginn am 09.01.2023 CompanyFlex Complete<br>
+SIP Trunc Hauptnetz  VDSL100<br>
+**Spachkanäle 2 Zeitgleiche Verbindungen** ins Festnetz<br>
+Zyxel VMG1312-B30A<br>
+LEDs Normal: 
+
+### **07147-6758**
+SIP Trunc Hauptnetz  VDSL100
+Sprachkanäle 2 Zeitgleiche Verbindungen ins Festnetz<br>
+Fritzbox 7430
+```
+Die Anzahl ihrer Gebuchten parallelen Verbindungen ist zur Zeit erreicht
+```
+
+### 07147675
+Gastzugang auf der Nummer 8 VDSL100
+Fritzbox 7430
+
+Kundencenter 
+
+nur Festnetz 0800 3302870<br>
+nur Mobile 0800 3302828<br>
+
+LTE Karte für ZTE 8-94902-00001-65603577-4<br>
+PIN: 0000 PUK 35532113<br>
+PIN2: 6790 PUK2 43102939<br>
+<br>
+0800 3302202<br>
+0170 7164356<br>
+Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
+
+# U
+## UL Microsoft Netzwerk
 
 Der Ordner 90_Download ist auf ein RDX-Laufwerk ausgelagert um die tägliche Datenwicherung (?) zu vermeiden. Falls der Link nicht mehr funktioniert muss das Verzeichnis \\\public\90_Download (deadlink) gelöscht werden und mit mit:
 
@@ -489,13 +562,13 @@ mklink /J j:\public\90_Download d:\90_Download
 
 erneut erstellt werden.
 
-#### DECT
+## DECT
 
-##### 15.9.21
+### 15.9.21
 
 N870 ist Basisstation und Dect Manager in einem und kostet 321€ z.Zt. nicht Verfügbar Lieferzeit 90 Tage nicht garantiert.
 
-##### 20.8.21
+### 20.8.21
 
 Dect-Manager -> Netzwerk und Anschlüsse -> Ereignisse in Basisstationen
 
@@ -505,14 +578,14 @@ Halle 2 mit Busy 184 (LAN-UV-2 Cl.1 udn SyncL.2)
 
 an Basisstationen überlastet. Deshalb habe ich ungenutzte versetzt.
 
-#### WLAN
+## WLAN
 
 xD!8i*avt
 UG220330
 
 25.8. Controller->IPv6->Global IPv6 Config auf disabled gesetzt
 
-#### Office365
+## Office365
 
 office: ulmerautomation-de01c.mail.protection.outlook.com
 
@@ -576,7 +649,11 @@ wwan0
   Typ: mobile
 ```
 </details>
-### Firewallzugänge
+
+<br>
+
+
+## Firewallzugänge
 
 https://my.hidrive.com/share/24zbyzcp6q
 
@@ -638,19 +715,19 @@ CAD-Laptop|MU Alter|+Docking im Sideboard|FJH770EDBF|P2PQ6-GJNPY-4QWMR-QQFKY-R6Y
 A.b.baeuerle@freenet.de
 1320derherristmeinhirte
 
-### Switch
+## Switch
 
-#### Port<->MAC Identifikation
+### Port<->MAC Identifikation
 
-##### Aruba 2930F
+#### Aruba 2930F
 
 68847e-92d736
 
 
 
-#### Konfigurationen
+### Konfigurationen
 
-##### LAN-UV-04	Halle (Hermle C650)
+#### LAN-UV-04	Halle (Hermle C650)
 
 | Port | Host              |
 | ---- | ----------------- |
@@ -661,51 +738,10 @@ A.b.baeuerle@freenet.de
 | 5    | 00:17:C8:79:D1:67 |
 |      |                   |
 
-## Telekom
-[allestörungen](https://allestörungen.de/)
-[netzausfall](https://www.netzausfall.net/)
-    
-#### Kontakt
+<details>
+<summary>Gesprächsprotokoll</summary>
 
-Telekom Kundennummer 1920006802
-IBAN DE10 6049 1430 0078 1960 00
-Telekom Geschäftskunden
-nur Festnetz 0800 3302870
-nur Mobile 0800 3302828
-
-### Leitungen
-#### 07147-220330
-SIP Trunc Hauptnetz  VDSL100
-4 Eingehende Zeitgleich
-4 Ausgehende Zeitgleich
-Zyxel VMG1312-B30A
-LEDs Normal: 
-
-#### 07147675
-Gastzugang auf der Nummer 8 VDSL100
-Fritzbox 7430
-
-Kundencenter [gerd.ulmer@t-online.de](mailto:gerd.ulmer@t-online.de) gu270651
-
-
-nur Festnetz 0800 3302870
-nur Mobile 0800 3302828
-
-LTE Karte für ZTE 8-94902-00001-65603577-4
-PIN: 0000 PUK 35532113
-PIN2: 6790 PUK2 43102939
-
-0800 3302202
-0170 7164356
-Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
-
-
-# Links
-[Github Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
-### Gesprächsprotokoll
-
-#### Matthias
+### Matthias
 
 15.11.21 12:40	Alle Azubi-Accounts löschen und ein Azubi Account anlegen.
 
@@ -713,25 +749,31 @@ Volumen buchen über: [pass.telekom.de](http://pass.telekom.de/)
 
 überzeiten abrechen
 
-## V
-### vncdotool
+</details>
+<br>
+
+## Links
+[Github Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+
+# V
+## vncdotool
 vnc Screenshots erstellen
 ```bash
 for i in {1..99999}; do vncdotool -s 192.168.178.93 capture img_$(printf "%05d" $i).png; sleep 60; done
 ```
 
 
-## W
-### Waldhof
+# W
+## Waldhof
 
-### Wireshark
-#### Display filter
+## Wireshark
+### Display filter
 ```
 frame.time_delta > 0.01 and data.data contains 0099 and ip.src == 172.16.47.15
 ```
 
-
-### WMIC
+## WMIC
 Informationen von Nodes abfragen
 ```cmd
 wmic /node:FJCM172D2E bios get serialnumber
