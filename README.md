@@ -15,6 +15,70 @@
 
 ## Wanted
 - [ ] 3 Hanf Pflanzen (Haschisch)
+- [ ] C++ Code der Ausreißer findet
+
+<details>
+<summary>Ausreißer finden</summary>
+
+```C++
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    ifstream file("data.dat"); // Datei öffnen
+    if (!file.is_open()) { // Überprüfen, ob die Datei geöffnet werden konnte
+        cout << "Failed to open file!" << endl;
+        return 1;
+    }
+
+    vector<double> values; // Vektor zum Speichern der Werte aus der zweiten Spalte
+    string line;
+    while (getline(file, line)) { // Eine Zeile nach der anderen aus der Datei lesen
+        istringstream iss(line);
+        string value1, value2;
+        if (!(iss >> value1 >> value2)) { // Zwei Werte aus der Zeile extrahieren
+            cout << "Failed to parse line: " << line << endl;
+            continue;
+        }
+        double val2;
+        try {
+            val2 = stod(value2); // Den zweiten Wert in eine Gleitkommazahl konvertieren
+        } catch (...) {
+            cout << "Failed to convert value to double: " << value2 << endl;
+            continue;
+        }
+        values.push_back(val2); // Den zweiten Wert im Vektor speichern
+    }
+
+    double mean = 0.0, sd = 0.0;
+    for (size_t i = 0; i < values.size(); i++) {
+        mean += values[i];
+    }
+    mean /= values.size(); // Durchschnitt berechnen
+
+    for (size_t i = 0; i < values.size(); i++) {
+        sd += pow(values[i] - mean, 2);
+    }
+    sd = sqrt(sd / (values.size() - 1)); // Standardabweichung berechnen
+
+    const double THRESHOLD = 3.0; // Grenzwert für Ausreißer
+    for (size_t i = 0; i < values.size(); i++) {
+        double zScore = (values[i] - mean) / sd;
+        if (abs(zScore) > THRESHOLD) { // Wenn z-Score größer als Grenzwert ist, ist es ein Ausreißer
+            cout << "Outlier detected at index " << i << ": " << values[i] << endl;
+        }
+    }
+
+    return 0;
+}
+
+```
+</details>
 
 ## Aktuell
 ### Top Aktuell
