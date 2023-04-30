@@ -290,6 +290,7 @@ cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
 # L
 ## Linux
+[linux-config](https://github.com/hawiwo/linux-config)
 ### find
 C't 2/14 S.158 Linux Dateizauber
 Hier ermittelt find alle Dateien, die vor fünf bis zehn Minuten modifiziert wurden, und führt
@@ -757,6 +758,8 @@ A.b.baeuerle@freenet.de
 
 
 # V
+## vim
+[vim-doc](https://vimdoc.sourceforge.net/htmldoc/usr_toc.html)
 ## vncdotool
 vnc Screenshots erstellen
 ```bash
