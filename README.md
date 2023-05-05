@@ -269,6 +269,7 @@ echo ${csv} >> puffer_oben.dat
 
 ```
 # C
+
 ## C++Builder
 
 Build Ergebnis **(.exe)** in ein Verzeichnis kopieren
@@ -276,6 +277,7 @@ Build Ergebnis **(.exe)** in ein Verzeichnis kopieren
 copy -y $(OUTPUTPATH) C:\usr\bin
 ```
 ## C++
+- firend class wird in der Klasse definiert auf deren private Objekte zugegriffen werden soll
 ### C++ 17
 ## CMD
 Dateien in eine Variable einlesen
@@ -829,14 +831,14 @@ Helmut | he18 | 13.9.
 Lknippel | LiKni
 Nicole | nima3105UL
 KoMi | scanner@ulmer-automation.de Pon83323
-jmagin | Temporäres Kennwort: Ful61966 Josefmagin15!
+jmagin | Temporäres Kennwort: Ful61966 Josefmagin15! | HPZ400A36B
 Alkemper, Marian | | 20.9.
 Hegele, Luca | | 13.9.
 Felix | fmNSikZs1E
 Ensar | | 13.9
 hannes stütz | Hay38630 (aiGaeg5R)
 ckumbeiz | Dog72780
-Stefan Mijic | Jag33398
+Stefan Mijic | Jag33398 | HPZ400A36B
 Tbangerdt | Rul38307 Aquaman5515 | | FJCM170D93
 hfix | Voz42044 | | HPZ440514650
 mhiller | Bod16975 | | TSP5207CB0
