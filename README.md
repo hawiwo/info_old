@@ -19,6 +19,92 @@
 # Wanted
 - [ ] 3 Hanf Pflanzen (Haschisch)
 - [ ] C++ Code der Ausreißer findet
+- [ ] iFMC
+
+<details>
+
+<summary>Template Logging Funktion</summary>
+
+```
+
+```
+
+
+Vesion mit std::vector bzw map
+
+```C++
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <map>
+#include <vcl.h>
+
+template<typename T>
+class Logger {
+public:
+    void log(const T& data, const char* file, int line) {
+        std::ofstream logfile;
+        logfile.open("log.txt", std::ios_base::app);
+        if (logfile.is_open()) {
+            if constexpr(std::is_same_v<T, std::string>) {
+                logfile << "[" << file << ":" << line << "] " << data << std::endl;
+            } else if constexpr(std::is_same_v<T, String>) {
+                UnicodeString ustr = UnicodeString(data);
+                AnsiString astr = AnsiString(ustr);
+                logfile << "[" << file << ":" << line << "] " << astr.c_str() << std::endl;
+            } else if constexpr(std::is_same_v<T, std::vector<typename T::value_type>>) {
+                logfile << "[" << file << ":" << line << "] vector (size=" << data.size() << "): [";
+                for (const auto& element : data) {
+                    log(element, file, line);
+                    logfile << ", ";
+                }
+                logfile << "]" << std::endl;
+            } else if constexpr(std::is_same_v<T, std::map<typename T::key_type, typename T::mapped_type>>) {
+                logfile << "[" << file << ":" << line << "] map (size=" << data.size() << "): {" << std::endl;
+                for (const auto& [key, value] : data) {
+                    logfile << "    " << key << ": ";
+                    log(value, file, line);
+                    logfile << std::endl;
+                }
+                logfile << "}" << std::endl;
+            } else {
+                logfile << "[" << file << ":" << line << "] " << data << std::endl;
+            }
+            logfile.close();
+        }
+    }
+};
+
+#define LOG(logger, data) logger.log(data, __FILE__, __LINE__)
+
+int main() {
+    Logger<int> intLogger;
+    LOG(intLogger, 42);
+
+    Logger<double> doubleLogger;
+    LOG(doubleLogger, 3.14159);
+
+    Logger<std::string> stringLogger;
+    LOG(stringLogger, "Hello, world!");
+
+    Logger<String> vclStringLogger;
+    LOG(vclStringLogger, "こんにちは、世界！");
+
+    Logger<std::vector<int>> intVectorLogger;
+    LOG(intVectorLogger, std::vector<int>{1, 2, 3});
+
+    Logger<std::vector<std::string>> stringVectorLogger;
+    LOG(stringVectorLogger, std::vector<std::string>{"one", "two", "three"});
+
+    Logger<std::map<std::string, int>> stringIntMapLogger;
+    LOG(stringIntMapLogger, std::map<std::string, int>{{"one", 1}, {"two", 2}, {"three", 3}});
+
+    return 0;
+}
+
+```
+</details>
 
 <details>
 <summary>Ausreißer finden</summary>
@@ -85,6 +171,8 @@ int main() {
 
 # Aktuell
 ## Top Aktuell
+Welche Chemikalien liefert Europa (USA) an China zu Chip Produktion
+
 ### Wortschöprungen
 - Alleinbeteiligt
 - Alleinunfall
@@ -144,6 +232,15 @@ netstat -o
 netstat -e -t 5
 ```
 # A
+## Asterisk
+```
+asterisk -r
+starface*CLI> core show channels
+```
+interaktiv loggen
+```
+while true; do asterisk -rx "core show channels" | grep "active" | tr '\n' ';' | awk 'BEGIN {ORS=" "} {print strftime("%Y-%m-%d %H:%M:%S");" "; print $0; print "\n"}' >> /var/log/asterisk/channels.log; sleep 5; done
+```
 # B
 ## Brunner
 Puffer Temperaturen auslesen und als CSV speichern
@@ -362,6 +459,8 @@ netsh int tcp set global autotuninglevel=normal
 # P
 ## Projekte Bezeichnungen und Kürzel
 ## Interne Projekte
+### Fertigungsplanung
+[FP2 README.md](https://github.com/hawiwo/FP2/blob/main/README.md)
 ### 73
 [KK3](https://github.com/hawiwo/77.2_KK3)
 
@@ -380,6 +479,10 @@ D - 98639 Rippershausen
 Tel.:+49 (3693) - 8993 272
 Fax:+49 (3693) - 8993 20
 ```
+### 303
+303. IMA Radialkraftmessgerät temperiert
+Kunde Trelleborg
+
 ### 306
 WE_Montage_Lenkspindel
 ```
@@ -473,12 +576,22 @@ qemu-system-x86_64 \
 
 # R
 # S
+## shutdown
 Computer neu starten und direkt ins BIOS
 ```cmd
 shutdown /r /fw /f /t 0
 ```
+## sngrep
+Sngrep ist ein Open-Source-Tool für die Analyse von SIP-Nachrichten. Es wird oft von Netzwerkadministratoren und VoIP-Technikern verwendet, um SIP-Nachrichten zu überwachen und zu debuggen.
+
+Mit sngrep können Sie eingehende und ausgehende SIP-Nachrichten aufzeichnen, filtern und analysieren. Sie können SIP-Nachrichten nach verschiedenen Kriterien filtern, wie z.B. SIP-Methoden (z.B. INVITE, REGISTER), SIP-Statuscodes (z.B. 200 OK, 404 Not Found), SIP-Header (z.B. From, To, Call-ID), IP-Adressen oder Ports. Sie können auch SIP-Nachrichten in Echtzeit anzeigen, um die Verarbeitung von SIP-Anrufen durch ein VoIP-System zu überwachen.
+
+Sngrep ist ein mächtiges Werkzeug für die Fehlersuche in VoIP-Netzwerken. Es kann Ihnen helfen, Probleme wie fehlerhafte SIP-Konfigurationen, unerwartete SIP-Verhaltensweisen oder Verbindungsprobleme zu identifizieren. Es ist auch ein wertvolles Werkzeug für die Sicherheitsüberwachung, da es Ihnen ermöglicht, unerwünschte SIP-Nachrichten oder Anrufe zu identifizieren und zu blockieren.
+
+Sngrep ist für Linux- und Unix-Systeme verfügbar und kann über die Paketverwaltung installiert werden.
 ## Starface
 [Support Ticket](https://www.starface.de/support/de/ticket.php)
+
 #### warum werden bei einem Telefonat 2 Aktive Kanäle angezeigt?
 ```
 Zur Zeit aktive Rufkanäle:	2
@@ -489,6 +602,11 @@ Jede Aktive Verbindung wird immer mit 2 Rufkanälen angezeigt.
 
 <details>
 <summary>Ticket 7816224 24.04.2023</summary>
+04.05.12 08:40 Silva 2 Level
+12:26
+
+12:54
+
 Rufkanäle
 </details>
 
@@ -524,16 +642,36 @@ nur Mobile 0800 3302828
 VDSL 100 IP (BNG) Vertragsbeginn am 09.01.2023 CompanyFlex Complete<br>
 SIP Trunc Hauptnetz  VDSL100<br>
 **Spachkanäle 2 Zeitgleiche Verbindungen** ins Festnetz<br>
-Zyxel VMG1312-B30A<br>
-LEDs Normal: 
-
-### **07147-6758**
-SIP Trunc Hauptnetz  VDSL100
-Sprachkanäle 2 Zeitgleiche Verbindungen ins Festnetz<br>
-Fritzbox 7430
+Da die 6758 physikalisch über die 220330 eingeht und die FritzBox keine Verbindung zur Starface hat, kann die Starface bei Belegung von 2 Sprachkanälen ins Festnetz nicht die Sprachkanäle der 6758 nutzen.
 ```
 Die Anzahl ihrer Gebuchten parallelen Verbindungen ist zur Zeit erreicht
 ```
+
+Zyxel VMG1312-B30A<br>
+```
+Provider:	
+Kopie von Telekom CompanyFlex Pure		Leitungsstatus:		registriert	
+Authentifizierung:	
+	ja
+	nein
+Benutzername:	
++49199296000000612430
+Authuser:	
++49199296000000612430@tel.t-online.de
+Passwort:	
+••••••••
+Outbound Proxy 1:	
+551138572628.primary.companyflex.de
+Outbound Proxy 2:	
+551138572628.secondary.companyflex.de
+```
+
+### **07147-6758** (DeutschlandLAN IP Voice/Data S 78270 1 51,95 51,95 19
+Premium (**kein CompanyFlex**)
+SIP Trunc Hauptnetz  VDSL100  2203310
+Sprachkanäle 2 Zeitgleiche Verbindungen ins Festnetz<br>
+Fritzbox 7430
+
 
 ### 07147675
 Gastzugang auf der Nummer 8 VDSL100
