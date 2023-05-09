@@ -1,12 +1,12 @@
 # info
 :+1:
 
+- [ ] https://github.com/hawiwo/FP2 (Achtung: Aktuell ist C:\data\test\FP2 )
 - [ ] AIM Anstehende Projekt [AIM](#273) 
 - [ ] KK3 [KK3](#73)
 - [ ] python4delphi dokumentieren
 - [ ] https://outlook.office.com/owa Outlook Web Access (OWA)
-- [ ] https://github.com/hawiwo/FP2
-- [ ] HP-Z440 Restliche Treiber installieren
+- [ ] HP-Z440 Restliche Treiber installieren (Spinnt Rechner? FP2 - JobMaske lässt sich nicht öffnen)
 - [ ] Raspberry PI in Drehspinner einbauen
 - [x] UFPS und UFPStest zusammengeführt. Beide Anwendungen laufen jetzt auf ufps.fdb
 - [x] De Nobile - wegen PV - Finkenweg
@@ -463,12 +463,15 @@ netsh int tcp set global autotuninglevel=normal
 ## Interne Projekte
 ### Fertigungsplanung
 [FP2 README.md](https://github.com/hawiwo/FP2/blob/main/README.md)
+Projekt Navigator: Mit einem SQL Befehl müssen alle Informationen für den Navigator ermittelt werden.
 ### 73
 [KK3](https://github.com/hawiwo/77.2_KK3)
 
 ### 273
 AIM_Automatisierung MMA
 S:\273. AIM_Automatisierung_MMA\90_Datenaustausch_Kunde\Datenbank\Konvertierungstool
+09.05.23 BP - Tool soll prüfen ob CSV-Spalten vorhanden sind. Evtl. Button nach dem letzten Import "Spalten als Default speichern"
+
 ### 301
 Willie Elbe WE_Verpassanlage
 Klaus K.
@@ -580,7 +583,9 @@ qemu-system-x86_64 \
 # S
 ## Scripts
 ### Powershell
-[Starface](Starface.md)
+- Prozess auf einem entferneten Rechner stoppen
+
+
 ## shutdown
 Computer neu starten und direkt ins BIOS
 ```cmd
@@ -595,14 +600,18 @@ Sngrep ist ein mächtiges Werkzeug für die Fehlersuche in VoIP-Netzwerken. Es k
 
 Sngrep ist für Linux- und Unix-Systeme verfügbar und kann über die Paketverwaltung installiert werden.
 ## Starface
-[Support Ticket](https://www.starface.de/support/de/ticket.php)
 
+[Support Ticket](https://www.starface.de/support/de/ticket.php)
+[Starface](Starface.md)
 <details>
 <summary>Ticket 7816224 24.04.2023</summary>
-04.05.12 08:40 Silva 2 Level
-12:26
+**Spachkanäle 2 Zeitgleiche Verbindungen** ins Festnetz<br>
+Da die 6758 physikalisch über die 220330 eingeht und die FritzBox keine Verbindung zur Starface hat, kann die Starface bei Belegung von 2 Sprachkanälen ins Festnetz nicht die Sprachkanäle der 6758 nutzen.
+```
+Die Anzahl ihrer Gebuchten parallelen Verbindungen ist zur Zeit erreicht
+```
 
-12:54
+04.05.12 08:40 Silva 2 Level
 
 Rufkanäle
 </details>
@@ -638,11 +647,6 @@ nur Mobile 0800 3302828
 ### **07147-220330**
 VDSL 100 IP (BNG) Vertragsbeginn am 09.01.2023 CompanyFlex Complete<br>
 SIP Trunc Hauptnetz  VDSL100<br>
-**Spachkanäle 2 Zeitgleiche Verbindungen** ins Festnetz<br>
-Da die 6758 physikalisch über die 220330 eingeht und die FritzBox keine Verbindung zur Starface hat, kann die Starface bei Belegung von 2 Sprachkanälen ins Festnetz nicht die Sprachkanäle der 6758 nutzen.
-```
-Die Anzahl ihrer Gebuchten parallelen Verbindungen ist zur Zeit erreicht
-```
 
 Zyxel VMG1312-B30A<br>
 ```
@@ -798,6 +802,7 @@ Name |Passwort | LastChange |PC Name | Win10 Key
 -------------------|----------------------------------------------- |-------------|------------------------|------------------------
 hwolf | 5m67+0as0 (Tresor: 527517) | | ARLT-4VV24|
 haraldwolf |localer user "ulmer"| | ARLT-4VV24|
+hwolf ||| FJE55107C72
 mulmer | 9@xA1-Su | | TP20NN65DE ?|
 tbuesch | _7EGI=i2 (Tbüsch 1704 TB2016) | 13.9. | FJCM172D2E TPP15SA797|
 kkaps | H_7#W1Gj (PC:kk010799) (O:KK2009ul) (8kk010799)| | FJME15BD763
