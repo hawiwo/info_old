@@ -276,6 +276,80 @@ Build Ergebnis **(.exe)** in ein Verzeichnis kopieren
 ```
 copy -y $(OUTPUTPATH) C:\usr\bin
 ```
+## Python integration
+[Using Python4Delphi with C++Builder VCL applications](https://davidiontools.com/2020/10/13/using-python4delphi-with-cbuilder-vcl-applications/)<br>
+[Using Python4Delphi with C++Builder (webinar):](https://blogs.embarcadero.com/using-python4delphi-with-cbuilder-vcl-applications/)
+
+<details>
+<summary>make.bat 32-bit</summary>
+
+```
+@ECHO OFF
+ECHO Compiling Python4Delphi Component Package for Win32
+dcc32 Python_D.dpk ^
+-I"C:\Users\Administrator\Downloads\python4delphi-master(1)\python4delphi-master\Source" ^
+-LE"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl" ^
+-LN"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp" ^
+-NH"C:\Users\Public\Documents\Embarcadero\Studio\22.0\hpp\Win32" ^
+-NB"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp" ^
+-E"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp" ^
+-JL ^
+--lib-suffix:280 ^
+-NSsystem;vcl;winapi;system.win ^
+-u"c:\program files (x86)\embarcadero\studio\22.0\lib\win32\release"
+ 
+move /y "C:\Users\Administrator\Downloads\python4delphi-master(1)\python4delphi-master\Packages\Delphi\Delphi 10.3-\Python_D.lib" "C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp\Python_D.lib"
+ 
+ECHO Completed Python4Delphi Component Package Win32
+pause
+```
+</details>
+
+<details>
+<summary>make.bat 64-bit</summary>
+
+```
+@ECHO OFF
+ECHO Compiling Python4Delphi Component Package for Win64
+dcc64 Python_D.dpk ^
+-I"C:\data\python4delphi-master\Source" ^
+-LE"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Win64" ^
+-LN"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp\Win64" ^
+-NH"C:\Users\Public\Documents\Embarcadero\Studio\22.0\hpp\Win64" ^
+-NB"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp\Win64" ^
+-E"C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp\Win64" ^
+-JL ^
+--lib-suffix:280 ^
+-NSsystem;vcl;winapi;system.win ^
+-u"c:\program files (x86)\embarcadero\studio\22.0\lib\win64\release"
+ 
+move /y "C:\data\python4delphi-master\Packages\Delphi\Delphi 10.4+\Python_D.a" "C:\Users\Public\Documents\Embarcadero\Studio\22.0\Dcp\Win64\Python_D.a"
+ 
+ECHO Completed Python4Delphi Component Package Win64
+pause
+```
+</details>
+
+[python4delphi-master.zip](https://github.com/pyscripter/python4delphi.git)<br>
+[Quickly Learn To Use Delphi Classes To Create A New Python Type With Python4Delphi Sample App](https://blogs.embarcadero.com/quickly-learn-to-use-delphi-classes-to-create-a-new-python-type-with-python4delphi-sample-app/)<br>
+
+**move verschiebt nichts wenn die Zielverzeichnisse nicht existieren (was sie beim Ersteveruchn nicht taten)**<br>
+Hinzufügen der Python Komponenten: Projekt->Optionen->Pakete-><Hinzufügen><br>
+C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Python_D280.bpl<br>
+-> "Components for Python"
+
+In der Tool-Palette finden sich jetzt:
+- TPythonEngine
+- TPythonType
+- TPythonModule
+- TPythonDelphiVar
+- TPythonInputOutput
+- TPyDelphiWrapper
+- TPythonGUIInputOutput
+
+**Proleme**
+- python33.dll nicht gefunden -> Lösung Python reinstall (vermutlich Versionsunterschied)
+
 ## C++
 - firend class wird in der Klasse definiert auf deren private Objekte zugegriffen werden soll
 ### C++ 17
@@ -302,6 +376,10 @@ netsh advfirewall firewall add rule name="UDC" dir=in action=allow protocol=UDP 
 ### Firewall ausschalten
 ```cmd
 netsh advfirewall set allprofiles state off
+```
+## Drucker konfigurieren
+```
+printui /s /t2
 ```
 # E
 Windows Explorer neu starten
@@ -372,6 +450,10 @@ git reset --hard HEAD
 um sicher zu gehen, dass auch die Staging-Area zurückgesetzt wird
 ```cmd
 git reset HEAD --hard
+```
+Staging aread zurücksetzen
+```
+git reset
 ```
 # H
 # I
