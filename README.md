@@ -272,6 +272,12 @@ echo ${csv} >> puffer_oben.dat
 
 ## C++Builder
 
+## Cases
+<details>
+<summary>00997768 11.05.2023</summary>
+</details>
+
+## Einstellungen
 Build Ergebnis **(.exe)** in ein Verzeichnis kopieren
 ```
 copy -y $(OUTPUTPATH) C:\usr\bin
