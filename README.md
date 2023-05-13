@@ -697,6 +697,18 @@ qemu-system-x86_64 \
 </details>
 
 # R
+## robocopy
+```cmd
+robocopy d:\musik w:\backup\musik /W:3 /R:5 /MIR /TEE /LOG+:"%USERPROFILE%\robo.log" /NP
+
+robocopy B:\ H:\Backup_von_Daten /mir /R:1 /W:1
+attrib -s -h H:\Backup_von_Daten
+```
+Quelle mit Ziel vergleichen
+```
+fciv d:\quelle -r -bp d:\quelle -xml check.xml 
+fciv -v -bp d:\ziel -xml check.xml 
+```
 # S
 ## Scripts
 ### Powershell
