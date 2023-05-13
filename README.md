@@ -186,7 +186,7 @@ Gemeint ist nämlich die Fortbewegung von Lebewesen auf zwei Füßen – das Gan
 
 
 ## Ausprobieren
-1. [RAD Studio 11.3 neue Features]()
+
 
 <details>
 <summary>mermaid Diagramme</summary>
@@ -232,6 +232,14 @@ netstat -o
 netstat -e -t 5
 ```
 # A
+<<<<<<< HEAD
+## awk
+Offset Spalte 2 auf einen Zeilen bereicht
+```
+awk -F '\t' 'BEGIN {OFS="\t"} NR>=2 && NR<=1977 {$2=$2+9.584441; print $1,$2} {print}' data.dat
+```
+
+=======
 ## Asterisk
 ```
 asterisk -r
@@ -241,6 +249,7 @@ interaktiv loggen
 ```
 while true; do asterisk -rx "core show channels" | grep "active" | tr '\n' ';' | awk 'BEGIN {ORS=" "} {print strftime("%Y-%m-%d %H:%M:%S");" "; print $0; print "\n"}' >> /var/log/asterisk/channels.log; sleep 5; done
 ```
+>>>>>>> d8a7b50a9bd39eca5ed851de1cb5b003774323ec
 # B
 ## Brunner
 Puffer Temperaturen auslesen und als CSV speichern
@@ -359,6 +368,24 @@ In der Tool-Palette finden sich jetzt:
 ## C++
 - firend class wird in der Klasse definiert auf deren private Objekte zugegriffen werden soll
 ### C++ 17
+### defines
+ist __DEBUG nicht definiert wird LOG(x) durch "nichts" ersetzt!
+```C++
+#ifdef __DEBUG
+#define LOG(x) std::cout << x << std::endl
+#else
+#define LOG(x)
+#endif
+```
+alternativ
+```C++
+#ifdef PR_DEBUG == 1
+#define LOG(x) std::cout << x << std::endl
+#else
+#define LOG(x)
+#endif
+```
+
 ## CMD
 Dateien in eine Variable einlesen
 ```
@@ -476,6 +503,8 @@ cmd://cmd /c "cmdkey /generic:TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSW
 cmd://"c:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" "{URL:RMVSCM}"
 ```
 # L
+## LED
+[LEDs24](https://shop.leds24.com/4198?cb.buy=1&cb.fbu=https%3A%2F%2Fwww.leds24.com%2Faluminium-led-unterputz-profil-trockenbau-plus%3Fnumber%3DCC-73-001&cb.med=PLA&cb.pub=google_de&cb.sid=0eb98149f0f711edb42f1358288cac01&cb.vid=CC-73-001&gad=1&gclid=CjwKCAjwx_eiBhBGEiwA15gLN3eqs4DoIwu3HT72mGXYmx1Mxa4XMnIQgjpd6gv2eUhOias1_1QKnBoCU0cQAvD_BwE&utm_content=~_cb~_1~_4198~_self~_google_de~_PLA~_0eb98149f0f711edb42f1358288cac01~_cbend_~)
 ## Linux
 [linux-config](https://github.com/hawiwo/linux-config)
 ### find
