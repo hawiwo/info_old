@@ -234,12 +234,12 @@ netstat -e -t 5
 # A
 <<<<<<< HEAD
 ## awk
-Offset Spalte 2 auf einen Zeilen bereicht
+
 ```
 awk -F '\t' 'BEGIN {OFS="\t"} NR>=2 && NR<=1977 {$2=$2+9.584441; print $1,$2} {print}' data.dat
 ```
 
-=======
+
 ## Asterisk
 ```
 asterisk -r
@@ -249,7 +249,7 @@ interaktiv loggen
 ```
 while true; do asterisk -rx "core show channels" | grep "active" | tr '\n' ';' | awk 'BEGIN {ORS=" "} {print strftime("%Y-%m-%d %H:%M:%S");" "; print $0; print "\n"}' >> /var/log/asterisk/channels.log; sleep 5; done
 ```
->>>>>>> d8a7b50a9bd39eca5ed851de1cb5b003774323ec
+
 # B
 ## Brunner
 Puffer Temperaturen auslesen und als CSV speichern
@@ -620,6 +620,12 @@ Fax:+49 (7941) - 9136 52
 ## Powershell
 [Batch Ruft Poweshell](https://github.com/hawiwo/scripts/blob/0c6d73e0d38e22f18af1b87df9a5c6846ff922e4/skeleton/Batch_Ruft_Powershell.txt)
 
+Prozessor auslesen.
+```
+Get-WmiObject -ComputerName FJCM17B1B9 Win32_Processor
+Get-CimInstance Win32_Processor
+```
+
 ## Python
 ### UDCCheck
 
@@ -966,7 +972,7 @@ Hegele, Luca | | 13.9.
 Felix | fmNSikZs1E
 Ensar | | 13.9
 hannes stütz | Hay38630 (aiGaeg5R)
-ckumbeiz | Dog72780
+ckumbeiz | Dog72780 
 Stefan Mijic | Jag33398 | HPZ400A36B
 Tbangerdt | Rul38307 Aquaman5515 | | FJCM170D93
 hfix | Voz42044 | | HPZ440514650
@@ -1037,6 +1043,16 @@ for i in {1..99999}; do vncdotool -s 192.168.178.93 capture img_$(printf "%05d" 
 
 
 # W
+
+## winget
+```
+winget install "google chrome"
+winget install -e --id Google.Chrome
+```
+Software, die mit winget installiert wurde updaten
+```
+winget upgrade --all
+```
 ## Waldhof
 
 ## Wireshark
